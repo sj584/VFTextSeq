@@ -20,12 +20,7 @@ conda install pip -y
 pip install -r requirements.txt --extra-index-url https://download.pytorch.org/whl/cu126
 ```
 <br/><br/>
-# Data processing steps for generating embeddings
-## Reference
-1. ESM2      [GitHub](https://github.com/facebookresearch/esm)
-2. InterProScan      [Document](https://interproscan-docs.readthedocs.io/en/v5/#)
-3. MMseqs2 taxonomy      [GitHub](https://github.com/soedinglab/MMseqs2) & [Document](https://github.com/soedinglab/mmseqs2/wiki)<br/>
-*[BERT](https://huggingface.co/google-bert/bert-base-uncased) for text embedding
+# Input explanation
 
 ## Example csv Input
 
@@ -50,6 +45,17 @@ MAFTRIHSFLASAGNTSMYKRVWRFWYPLMTHKLGTDEIMFINWAYEEDPPMALPLEASDEPNRAHINLYHRTATQVNLS
 ## [Note] <br/><br/> **when generating embeddings.** <br>**embedding file should be saved as {id}.pt**<br/>
 
 <br/><br/><br/>
+
+# Data processing steps for generating embeddings<br/><br/>
+## Reference
+1. ESM2      [GitHub](https://github.com/facebookresearch/esm)
+2. InterProScan      [Document](https://interproscan-docs.readthedocs.io/en/v5/#)
+3. MMseqs2 taxonomy      [GitHub](https://github.com/soedinglab/MMseqs2) & [Document](https://github.com/soedinglab/mmseqs2/wiki)<br/>
+*[BERT](https://huggingface.co/google-bert/bert-base-uncased) for text embedding
+
+## [Note] <br/><br/> **when generating embeddings.** <br>**embedding file should be saved as {id}.pt**<br/>
+
+<br/><br/>
 
 ## ESM2 embedding (650M)
 ```python
