@@ -22,9 +22,9 @@ pip install -r requirements.txt --extra-index-url https://download.pytorch.org/w
 <br/><br/>
 # Data processing steps for generating embeddings
 
-1. ESM2      [ESM2 GitHub](https://github.com/facebookresearch/esm)
-2. InterProScan      [InterProScan Document](https://interproscan-docs.readthedocs.io/en/v5/#)
-3. MMseqs2 taxonomy      [MMseqs2 GitHub](https://github.com/soedinglab/MMseqs2) & [MMseqs2 Document](https://github.com/soedinglab/mmseqs2/wiki)<br/>
+1. ESM2      [GitHub](https://github.com/facebookresearch/esm)
+2. InterProScan      [Document](https://interproscan-docs.readthedocs.io/en/v5/#)
+3. MMseqs2 taxonomy      [GitHub](https://github.com/soedinglab/MMseqs2) & [Document](https://github.com/soedinglab/mmseqs2/wiki)<br/>
 *[BERT](https://huggingface.co/google-bert/bert-base-uncased) for text embedding
 
 ## Example csv Input
