@@ -1,8 +1,8 @@
 # VFTextSeq
 
-# Environment setting
+# Environment
 ```python
-### conda setting ###
+### conda env setting ###
 
 # download and locate to the github repository
 git clone https://github.com/sj584/VFTextSeq.git
@@ -13,10 +13,6 @@ conda create -n VFTextSeq
 
 # conda activate VFTextSeq environment
 conda activate VFTextSeq
-```
-
-```python
-### installation ###
 
 # install pip
 conda install pip -y
