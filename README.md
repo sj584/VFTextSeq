@@ -1,5 +1,5 @@
 # VFTextSeq <br/>
-# Environment (version compatibility O)
+# Environment (any library version is ok)
 ```python
 ### conda env setting ###
 
