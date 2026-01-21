@@ -1,10 +1,17 @@
 # VFTextSeq
 
 ## environment
-pytorch
-numpy
-transformers
+```python
+# conda environment creation
+conda create -n VFTextSeq
 
+# conda activate VFTextSeq environment
+conda activate VFTextSeq
+
+# install
+conda install pip -y
+pip install -r requirements.txt --extra-index-url https://download.pytorch.org/whl/cu126
+```
 
 # Data processing steps
 
