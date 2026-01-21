@@ -51,7 +51,7 @@ MAFTRIHSFLASAGNTSMYKRVWRFWYPLMTHKLGTDEIMFINWAYEEDPPMALPLEASDEPNRAHINLYHRTATQVNLS
 
 ## ESM2 embedding (650M)
 ```python
-python esm_embedding.py --fasta_path example.fasta --output_dir example/esm_emb
+python src/esm_embedding.py --fasta_path example.fasta --output_dir example/esm_emb
 ```
 
 ## InterProScan
@@ -60,13 +60,13 @@ python esm_embedding.py --fasta_path example.fasta --output_dir example/esm_emb
 ./interproscan.sh -i example.fasta -f tsv -o example_interproscan.tsv
 
 # change tsv file into csv for column annotation
-python interpro_tsv2csv.py --tsv_file example/example.csv --output_file example/example_interproscan.csv
+python src/interpro_tsv2csv.py --tsv_file example/example.csv --output_file example/example_interproscan.csv
 
 # run semantic removal for interproscan
-python interpro_remove_semantics.py --csv_file example/example.csv --interpro_csv example/example_interproscan.csv --output_file example/example_interproscan_rm_dup.csv
+python src/interpro_remove_semantics.py --csv_file example/example.csv --interpro_csv example/example_interproscan.csv --output_file example/example_interproscan_rm_dup.csv
 
 # get bert embedding of interproscan
-python interpro_Bert_emb.py --input_csv example/example_interproscan_rm_dup.csv --output_dir example/interproscan_bert_emb
+python src/interpro_Bert_emb.py --input_csv example/example_interproscan_rm_dup.csv --output_dir example/interproscan_bert_emb
 
 ```
 
@@ -79,17 +79,17 @@ mmseqs database GTDB mmseqs_gtdb/gtdb tmp
 mmseqs easy-taxonomy example.fasta mmseq_gtdb/gtdb alnRes tmp
 
 # change tsv file into csv file (add column)
-python tax_tsv2csv.py --input_file example/alnRes_lca.tsv --output_file example/alnRes_lca.csv
+python src/tax_tsv2csv.py --input_file example/alnRes_lca.tsv --output_file example/alnRes_lca.csv
 
 # map taxonomy to input csv file
-python tax_map.py --lca_file example/alnRes_lca.csv --input_file example/example.csv --output_file example/example_taxonomy.csv
+python src/tax_map.py --lca_file example/alnRes_lca.csv --input_file example/example.csv --output_file example/example_taxonomy.csv
 
 # get bert embedding of interproscan
-python tax_Bert_emb.py --input_csv example/example_taxonomy.csv --output_dir example/tax_bert_emb
+python src/tax_Bert_emb.py --input_csv example/example_taxonomy.csv --output_dir example/tax_bert_emb
 ```
 
 
 # Prediction
 ```python
-python predict.py --input_csv example/example.csv --output result.csv --esm_emb example/esm_emb --interproscan_emb example/interproscan_bert_emb --tax_emb example/tax_bert_emb
+python src/predict.py --input_csv example/example.csv --output result.csv --esm_emb example/esm_emb --interproscan_emb example/interproscan_bert_emb --tax_emb example/tax_bert_emb
 ```
