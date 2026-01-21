@@ -48,14 +48,14 @@ MAFTRIHSFLASAGNTSMYKRVWRFWYPLMTHKLGTDEIMFINWAYEEDPPMALPLEASDEPNRAHINLYHRTATQVNLS
 
 <br/><br/>
 
-1. ESM2 Embeddings (650M)
+### 1. ESM2 Embeddings (650M)
 ```python
 python src/esm_embedding.py --fasta_path example/example.fasta --output_dir example/esm_emb
 ```
 
 <br/>
 
-2. InterProScan Annotations
+### 2. InterProScan Annotations
 ```python
 # run interproscan to get annotations (several hours)
 ./interproscan.sh -i example.fasta -f tsv -o example_interproscan.tsv
@@ -71,8 +71,7 @@ python src/interpro_Bert_emb.py --input_csv example/example_interproscan_rm_dup.
 ```
 
 <br/>
-3. MMseqs2 Taxonomy
-## MMseqs2 taxonomy
+### 3. MMseqs2 Taxonomy
 ```python
 # load GTDB database (1~2 days)
 mmseqs database GTDB mmseqs_gtdb/gtdb tmp
