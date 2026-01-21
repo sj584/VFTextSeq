@@ -26,8 +26,9 @@ InterProScan
 
 MMseqs2 taxonomy
 ```python
-# load GTDB database 
+# load GTDB database (will take 1-2days)
 mmseqs database GTDB mmseqs_gtdb/gtdb tmp
+
 # run taxonomy search on the database
 mmseqs easy-taxonomy example.fasta mmseq_gtdb/gtdb alnRes tmp
 ```
