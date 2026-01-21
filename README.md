@@ -35,8 +35,7 @@ pip install -r requirements.txt --extra-index-url https://download.pytorch.org/w
 | sp&#124;P26683&#124;SIGA_NOSS1 | 0     |
 | VFG007156       | 1     |
 | VFG007971       | 1     |
-<br>
-<br>
+
 ## Example FASTA Input
 
 ```fasta
