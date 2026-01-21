@@ -41,11 +41,10 @@ MAFTRIHSFLASAGNTSMYKRVWRFWYPLMTHKLGTDEIMFINWAYEEDPPMALPLEASDEPNRAHINLYHRTATQVNLS
 ```
 
 <br/><br/>
-# Data processing steps for generating embeddings<br/><br/>
+# 🧬Data processing steps for generating embeddings<br/><br/>
 
 **Note:** Embedding files must be saved as **{id}**.pt
 
-### 🧬 Embedding Generation Pipeline
 
 <br/><br/>
 
