@@ -46,14 +46,14 @@ MAYQASDLMADVIALVEQRWVSSEEIWKIATSMELVAIEQKIDFFRELHKLIRHIPVDVFADDEQRQNLIQAAQKALDEA
 >VFG007971
 MAFTRIHSFLASAGNTSMYKRVWRFWYPLMTHKLGTDEIMFINWAYEEDPPMALPLEASDEPNRAHINLYHRTATQVNLSGKRILEVSCGHGGGASYLTRALHPASYTGLDLNPAGIKLCQKRHQLPGLEFVRGDAENLPFDNESFDVVINIEASHCYPHFPRFLAEVVRVLRPGGHLAYADLRPSNKVGEWEVDFANSRLQQLSQREINAEVLRGIASNSQKSRDLVDRHLPAFLRFAGREFIGVQGTQLSRYLEGGELSYRMYSFAKD
 ```
-
+<br/>
 ## [Note]<br> **when generating embeddings. <br>embedding file should be saved as {id}.pt**
-
+<br/><br/><br/>
 ## ESM2 embedding (650M)
 ```python
 python src/esm_embedding.py --fasta_path example/example.fasta --output_dir example/esm_emb
 ```
-
+<br/><br/>
 ## InterProScan
 ```python
 # run interproscan to get annotations (several hours)
@@ -69,7 +69,7 @@ python src/interpro_remove_semantics.py --csv_file example/example.csv --interpr
 python src/interpro_Bert_emb.py --input_csv example/example_interproscan_rm_dup.csv --output_dir example/interproscan_bert_emb
 
 ```
-
+<br/><br/>
 ## MMseqs2 taxonomy
 ```python
 # load GTDB database (1~2 days)
@@ -87,7 +87,7 @@ python src/tax_map.py --lca_file example/alnRes_lca.csv --input_file example/exa
 # get bert embedding of interproscan
 python src/tax_Bert_emb.py --input_csv example/example_taxonomy.csv --output_dir example/tax_bert_emb
 ```
-
+<br/><br/>
 
 # Prediction
 ```python
