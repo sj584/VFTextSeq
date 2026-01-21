@@ -22,11 +22,12 @@ conda install pip -y
 pip install -r requirements.txt --extra-index-url https://download.pytorch.org/whl/cu126
 ```
 
-# Data processing steps
+# Data processing steps for generating embeddings
 
-1. ESM2 embedding      [ESM2 GitHub](https://github.com/facebookresearch/esm)
-3. InterProScan      [InterProScan Document](https://interproscan-docs.readthedocs.io/en/v5/#)
-4. MMseqs2 taxonomy      [MMseqs2 GitHub](https://github.com/soedinglab/MMseqs2) & [MMseqs2 Document](https://github.com/soedinglab/mmseqs2/wiki)
+1. ESM2      [ESM2 GitHub](https://github.com/facebookresearch/esm)
+2. InterProScan      [InterProScan Document](https://interproscan-docs.readthedocs.io/en/v5/#)
+3. MMseqs2 taxonomy      [MMseqs2 GitHub](https://github.com/soedinglab/MMseqs2) & [MMseqs2 Document](https://github.com/soedinglab/mmseqs2/wiki)
+[BERT](https://huggingface.co/google-bert/bert-base-uncased)
 
 ## Example csv Input
 
