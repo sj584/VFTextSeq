@@ -95,7 +95,7 @@ python src/predict.py --input_csv example/example.csv --output result.csv --esm_
 
 ## Model Prediction Results
 
-| ID                | Probability | Predicted | True Label |
+| id                | prob | pred | label |
 |-------------------|-------------|-----------|------------|
 | sp\|P26683\|SIGA_NOSS1 | 0.0135     | 0         | 0          |
 | VFG007156         | 0.9783     | 1         | 1          |
