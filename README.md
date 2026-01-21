@@ -24,12 +24,6 @@ pip install -r requirements.txt
 
 ## Example csv 
 
-CSV Labels
-id	label
-sp|P26683|SIGA_NOSS1	0
-VFG007156	1
-VFG007971	1
-
 | id              | label |
 |-----------------|-------|
 | sp&#124;P26683&#124;SIGA_NOSS1 | 0     |
@@ -50,24 +44,20 @@ MAFTRIHSFLASAGNTSMYKRVWRFWYPLMTHKLGTDEIMFINWAYEEDPPMALPLEASDEPNRAHINLYHRTATQVNLS
 <br/><br/>
 # Data processing steps for generating embeddings<br/><br/>
 
-## [Note] <br/><br/> **when generating embeddings.** <br>**embedding file should be saved as {id}.pt**<br/>
+**Note:** Embedding files must be saved as **{id}**.pt
 
-
-1. ESM2      [GitHub](https://github.com/facebookresearch/esm)
-2. InterProScan      [Document](https://interproscan-docs.readthedocs.io/en/v5/#)
-3. MMseqs2 taxonomy      [GitHub](https://github.com/soedinglab/MMseqs2) & [Document](https://github.com/soedinglab/mmseqs2/wiki)<br/>
-*[BERT](https://huggingface.co/google-bert/bert-base-uncased) for text embedding
+🧬 Embedding Generation Pipeline
 
 <br/><br/>
 
-## ESM2 embedding (650M)
+1. ESM2 Embeddings (650M)
 ```python
 python src/esm_embedding.py --fasta_path example/example.fasta --output_dir example/esm_emb
 ```
 
 <br/>
 
-## InterProScan
+2. InterProScan Annotations
 ```python
 # run interproscan to get annotations (several hours)
 ./interproscan.sh -i example.fasta -f tsv -o example_interproscan.tsv
@@ -83,7 +73,7 @@ python src/interpro_Bert_emb.py --input_csv example/example_interproscan_rm_dup.
 ```
 
 <br/>
-
+3. MMseqs2 Taxonomy
 ## MMseqs2 taxonomy
 ```python
 # load GTDB database (1~2 days)
@@ -103,6 +93,8 @@ python src/tax_Bert_emb.py --input_csv example/example_taxonomy.csv --output_dir
 ```
 <br/><br/>
 
+
+
 # Prediction
 ```python
 python src/predict.py --input_csv example/example.csv --output result.csv --esm_emb example/esm_emb --interproscan_emb example/interproscan_bert_emb --tax_emb example/tax_bert_emb
@@ -115,3 +107,13 @@ python src/predict.py --input_csv example/example.csv --output result.csv --esm_
 | sp\|P26683\|SIGA_NOSS1 | 0.0135     | 0         | 0          |
 | VFG007156         | 0.9783     | 1         | 1          |
 | VFG007971         | 0.9943     | 1         | 1          |
+
+📚 References
+1. ESM2 - Protein language model <br/>
+>>> [GitHub](https://github.com/facebookresearch/esm)
+2. InterProScan - Functional annotations <br/>
+>>> [Document](https://interproscan-docs.readthedocs.io/en/v5/#)
+3. MMseqs2 taxonomy - Taxonomy search <br/>
+>>> [GitHub](https://github.com/soedinglab/MMseqs2) & [Document](https://github.com/soedinglab/mmseqs2/wiki)<br/>
+4. BERT - language mode for text embedding
+*[BERT](https://huggingface.co/google-bert/bert-base-uncased) 
