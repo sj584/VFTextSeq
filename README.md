@@ -20,15 +20,15 @@ python esm_embedding.py -i example.fasta -out_dir esm_emb
 
 InterProScan
 ```python
-# run interproscan to get annotations
+# run interproscan to get annotations (several hours)
 ./interproscan.sh -i example.fasta -f tsv -o example.tsv
 ```
 
 MMseqs2 taxonomy
 ```python
-# load GTDB database (will take 1-2days)
+# load GTDB database (1~2 days)
 mmseqs database GTDB mmseqs_gtdb/gtdb tmp
 
-# run taxonomy search on the database
+# run taxonomy search on the database (several hours)
 mmseqs easy-taxonomy example.fasta mmseq_gtdb/gtdb alnRes tmp
 ```
