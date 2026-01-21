@@ -46,7 +46,7 @@ MAFTRIHSFLASAGNTSMYKRVWRFWYPLMTHKLGTDEIMFINWAYEEDPPMALPLEASDEPNRAHINLYHRTATQVNLS
 
 **Note:** Embedding files must be saved as **{id}**.pt
 
-## 🧬 Embedding Generation Pipeline
+### 🧬 Embedding Generation Pipeline
 
 <br/><br/>
 
