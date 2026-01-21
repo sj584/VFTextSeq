@@ -7,9 +7,9 @@ conda create -n VFTextSeq
 
 # conda activate VFTextSeq environment
 conda activate VFTextSeq
+```
 
-### installation (any library versions is fine)
-
+```python
 # install pip
 conda install pip -y
 
