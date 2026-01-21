@@ -1,5 +1,5 @@
 # VFTextSeq <br/>
-# Environment (any library version is ok)
+# Environment 
 ```python
 ### conda env setting ###
 
@@ -16,10 +16,10 @@ conda activate VFTextSeq
 # install pip
 conda install pip -y
 
-# install pytorch (any version is ok)
+# install pytorch
 conda install pytorch==2.5.1 torchvision==0.20.1 torchaudio==2.5.1 pytorch-cuda=12.4 -c pytorch -c nvidia
 
-# install other libraries using requirements.txt (url for pytorch version)
+# install other libraries using requirements.txt 
 pip install -r requirements.txt
 ```
 <br/><br/>
