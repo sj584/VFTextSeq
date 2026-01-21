@@ -92,3 +92,11 @@ python src/tax_Bert_emb.py --input_csv example/example_taxonomy.csv --output_dir
 ```python
 python src/predict.py --input_csv example/example.csv --output result.csv --esm_emb example/esm_emb --interproscan_emb example/interproscan_bert_emb --tax_emb example/tax_bert_emb
 ```
+
+## Model Prediction Results
+
+| ID                | Probability | Predicted | True Label |
+|-------------------|-------------|-----------|------------|
+| sp\|P26683\|SIGA_NOSS1 | 0.0135     | 0         | 0          |
+| VFG007156         | 0.9783     | 1         | 1          |
+| VFG007971         | 0.9943     | 1         | 1          |
