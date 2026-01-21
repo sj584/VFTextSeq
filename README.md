@@ -38,6 +38,10 @@ python interpro_tsv2csv.py --tsv_file example/example_interproscan.tsv --output_
 
 # run semantic removal for interproscan
 python interpro_remove_semantics.py --csv_file example/example_interproscan.csv --interpro_csv example/example_interproscan.csv --output_file example/example_interproscan_rm_dup.csv
+
+# get bert embedding of interproscan
+python interpro_Bert_emb.py --input_csv example/example_interproscan_rm_dup.csv --output_dir example/interproscan_bert_emb
+
 ```
 
 MMseqs2 taxonomy
