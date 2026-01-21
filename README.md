@@ -1,6 +1,6 @@
 # VFTextSeq
 
-## environment
+# Environment setting
 ```python
 # conda environment creation
 conda create -n VFTextSeq
