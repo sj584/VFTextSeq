@@ -1,5 +1,5 @@
 # VFTextSeq
-
+<br/><br/>
 # Environment (version compatibility O)
 ```python
 ### conda env setting ###
@@ -20,7 +20,7 @@ conda install pip -y
 # install using requirements.txt (url for pytorch version)
 pip install -r requirements.txt --extra-index-url https://download.pytorch.org/whl/cu126
 ```
-
+<br/><br/>
 # Data processing steps for generating embeddings
 
 1. ESM2      [ESM2 GitHub](https://github.com/facebookresearch/esm)
