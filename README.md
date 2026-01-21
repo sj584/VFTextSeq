@@ -23,12 +23,12 @@ pip install -r requirements.txt --extra-index-url https://download.pytorch.org/w
 4. MMseqs2 taxonomy      [MMseqs2 GitHub](https://github.com/soedinglab/MMseqs2) & [MMseqs2 Document](https://github.com/soedinglab/mmseqs2/wiki)
 
 
-ESM2 embedding (650M)
+## ESM2 embedding (650M)
 ```python
 python esm_embedding.py --fasta_path example.fasta --output_dir example/esm_emb
 ```
 
-InterProScan
+## InterProScan
 ```python
 # run interproscan to get annotations (several hours)
 ./interproscan.sh -i example.fasta -f tsv -o example_interproscan.tsv
@@ -44,7 +44,7 @@ python interpro_Bert_emb.py --input_csv example/example_interproscan_rm_dup.csv 
 
 ```
 
-MMseqs2 taxonomy
+## MMseqs2 taxonomy
 ```python
 # load GTDB database (1~2 days)
 mmseqs database GTDB mmseqs_gtdb/gtdb tmp
