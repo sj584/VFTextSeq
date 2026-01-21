@@ -1,6 +1,5 @@
 # VFTextSeq <br/>
-## Environment 
-### 🚀 Quick Start
+## 🚀 Environment setup
 ```python
 
 
