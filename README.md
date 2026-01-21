@@ -25,7 +25,7 @@ pip install -r requirements.txt --extra-index-url https://download.pytorch.org/w
 
 ESM2 embedding (650M)
 ```python
-python esm_embedding.py --fasta_path example.fasta --output_dir esm_emb
+python esm_embedding.py --fasta_path example.fasta --output_dir example/esm_emb
 ```
 
 InterProScan
