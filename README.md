@@ -51,6 +51,7 @@ MAFTRIHSFLASAGNTSMYKRVWRFWYPLMTHKLGTDEIMFINWAYEEDPPMALPLEASDEPNRAHINLYHRTATQVNLS
 <br/><br/><br/>
 
 ## ESM2 embedding (650M)
+
 ```python
 python src/esm_embedding.py --fasta_path example/example.fasta --output_dir example/esm_emb
 ```
