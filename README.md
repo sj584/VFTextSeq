@@ -17,7 +17,8 @@ conda activate VFTextSeq
 # install pip
 conda install pip -y
 
-# install using requirements.txt (url for pytorch version-any version is ok)
+# install using requirements.txt
+# url for pytorch version -> any version is ok
 pip install -r requirements.txt --extra-index-url https://download.pytorch.org/whl/cu126
 ```
 
