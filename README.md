@@ -28,6 +28,17 @@ pip install -r requirements.txt --extra-index-url https://download.pytorch.org/w
 3. InterProScan      [InterProScan Document](https://interproscan-docs.readthedocs.io/en/v5/#)
 4. MMseqs2 taxonomy      [MMseqs2 GitHub](https://github.com/soedinglab/MMseqs2) & [MMseqs2 Document](https://github.com/soedinglab/mmseqs2/wiki)
 
+## Example Data
+
+| id              | label |
+|-----------------|-------|
+| sp&#124;P26683&#124;SIGA_NOSS1 | 0     |
+| VFG007156       | 1     |
+| VFG007971       | 1     |
+
+** when generating embeddings. 
+they should be saved as {id}.pt
+
 
 ## ESM2 embedding (650M)
 ```python
@@ -68,5 +79,5 @@ python interpro_Bert_emb.py --input_csv example/alnRes.csv --output_dir example/
 
 # Prediction
 ```python
-python predict.py --input_csv example.csv --output result.csv --esm_emb example/esm_emb --interproscan_emb example/interproscan_emb --tax_emb example/interproscan_bert_emb
+python predict.py --input_csv example/example.csv --output result.csv --esm_emb example/esm_emb --interproscan_emb example/interproscan_emb --tax_emb example/interproscan_bert_emb
 ```
