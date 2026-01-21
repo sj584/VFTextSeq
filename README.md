@@ -34,7 +34,7 @@ InterProScan
 ./interproscan.sh -i example.fasta -f tsv -o example_interproscan.tsv
 
 # change tsv file into csv for column annotation
-python interpro_tsv2csv.py --tsv_file example/example_interproscan.tsv --output_file example/example_interproscan.csv
+python interpro_tsv2csv.py --tsv_file example/example.csv --output_file example/example_interproscan.csv
 
 # run semantic removal for interproscan
 python interpro_remove_semantics.py --csv_file example/example_interproscan.csv --interpro_csv example/example_interproscan.csv --output_file example/example_interproscan_rm_dup.csv
