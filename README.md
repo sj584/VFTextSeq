@@ -1,6 +1,6 @@
 # VFTextSeq
 
-# Environment
+# Environment (version compatibility O)
 ```python
 ### conda env setting ###
 
@@ -17,8 +17,7 @@ conda activate VFTextSeq
 # install pip
 conda install pip -y
 
-# install using requirements.txt
-# url for pytorch version -> any version is ok
+# install using requirements.txt (url for pytorch version)
 pip install -r requirements.txt --extra-index-url https://download.pytorch.org/whl/cu126
 ```
 
