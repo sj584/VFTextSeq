@@ -99,6 +99,8 @@ python src/tax_Bert_emb.py --input_csv example/example_taxonomy.csv --output_dir
 python src/predict.py --input_csv example/example.csv --output result.csv --esm_emb example/esm_emb --interproscan_emb example/interproscan_bert_emb --tax_emb example/tax_bert_emb
 ```
 
+<br/>
+
 ## Model Prediction Results
 
 | id                | prob | pred | label |
@@ -106,6 +108,8 @@ python src/predict.py --input_csv example/example.csv --output result.csv --esm_
 | sp\|P26683\|SIGA_NOSS1 | 0.0135     | 0         | 0          |
 | VFG007156         | 0.9783     | 1         | 1          |
 | VFG007971         | 0.9943     | 1         | 1          |
+
+<br/>
 
 ### 📚 References
 1. ESM2 - Protein language model [GitHub](https://github.com/facebookresearch/esm)
