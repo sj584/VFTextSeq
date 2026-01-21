@@ -1,6 +1,5 @@
 # VFTextSeq
-<br>
-<br>
+
 # Environment (version compatibility O)
 ```python
 ### conda env setting ###
@@ -21,17 +20,14 @@ conda install pip -y
 # install using requirements.txt (url for pytorch version)
 pip install -r requirements.txt --extra-index-url https://download.pytorch.org/whl/cu126
 ```
-<br>
-<br>
-<br>
+
 # Data processing steps for generating embeddings
 
 1. ESM2      [ESM2 GitHub](https://github.com/facebookresearch/esm)
 2. InterProScan      [InterProScan Document](https://interproscan-docs.readthedocs.io/en/v5/#)
 3. MMseqs2 taxonomy      [MMseqs2 GitHub](https://github.com/soedinglab/MMseqs2) & [MMseqs2 Document](https://github.com/soedinglab/mmseqs2/wiki)
 [BERT](https://huggingface.co/google-bert/bert-base-uncased)
-<br>
-<br>
+
 ## Example csv Input
 
 | id              | label |
@@ -53,10 +49,7 @@ MAFTRIHSFLASAGNTSMYKRVWRFWYPLMTHKLGTDEIMFINWAYEEDPPMALPLEASDEPNRAHINLYHRTATQVNLS
 ```
 
 ## [Note] **when generating embeddings. embedding file should be saved as {id}.pt**
-<br>
-<br>
-<br>
-<br>
+
 ## ESM2 embedding (650M)
 ```python
 python esm_embedding.py --fasta_path example.fasta --output_dir example/esm_emb
@@ -79,9 +72,7 @@ python interpro_remove_semantics.py --csv_file example/example.csv --interpro_cs
 python interpro_Bert_emb.py --input_csv example/example_interproscan_rm_dup.csv --output_dir example/interproscan_bert_emb
 
 ```
-<br>
-<br>
-<br>
+
 ## MMseqs2 taxonomy
 ```python
 # load GTDB database (1~2 days)
@@ -96,8 +87,7 @@ python tax_tsv2csv --input_file alnRes.tsv --output_file alnRes.csv
 # get bert embedding of interproscan
 python interpro_Bert_emb.py --input_csv example/alnRes.csv --output_dir example/tax_bert_emb
 ```
-<br>
-<br>
+
 <br>
 # Prediction
 ```python
