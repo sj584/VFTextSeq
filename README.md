@@ -45,8 +45,7 @@ MAFTRIHSFLASAGNTSMYKRVWRFWYPLMTHKLGTDEIMFINWAYEEDPPMALPLEASDEPNRAHINLYHRTATQVNLS
 
 **Note:** Embedding files must be saved as **{id}**.pt
 
-
-<br/><br/>
+<br/>
 
 ### 1. ESM2 Embeddings (650M)
 ```python
