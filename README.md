@@ -24,6 +24,12 @@ pip install -r requirements.txt
 
 ## Example csv 
 
+CSV Labels
+id	label
+sp|P26683|SIGA_NOSS1	0
+VFG007156	1
+VFG007971	1
+
 | id              | label |
 |-----------------|-------|
 | sp&#124;P26683&#124;SIGA_NOSS1 | 0     |
