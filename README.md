@@ -72,6 +72,7 @@ python src/interpro_Bert_emb.py --input_csv example/example_interproscan_rm_dup.
 
 <br/>
 ### 3. MMseqs2 Taxonomy
+
 ```python
 # load GTDB database (1~2 days)
 mmseqs database GTDB mmseqs_gtdb/gtdb tmp
@@ -88,6 +89,7 @@ python src/tax_map.py --lca_file example/alnRes_lca.csv --input_file example/exa
 # get bert embedding of interproscan
 python src/tax_Bert_emb.py --input_csv example/example_taxonomy.csv --output_dir example/tax_bert_emb
 ```
+
 <br/><br/>
 
 
