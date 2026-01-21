@@ -90,7 +90,6 @@ python src/tax_map.py --lca_file example/alnRes_lca.csv --input_file example/exa
 python src/tax_Bert_emb.py --input_csv example/example_taxonomy.csv --output_dir example/tax_bert_emb
 ```
 
-<br/><br/>
 
 
 
