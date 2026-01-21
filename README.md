@@ -4,6 +4,10 @@
 ```python
 ### conda setting ###
 
+# download and locate to the github repository
+git clone https://github.com/sj584/VFTextSeq.git
+cd VFTextSeq
+
 # conda environment creation
 conda create -n VFTextSeq
 
