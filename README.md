@@ -52,8 +52,6 @@ MAFTRIHSFLASAGNTSMYKRVWRFWYPLMTHKLGTDEIMFINWAYEEDPPMALPLEASDEPNRAHINLYHRTATQVNLS
 3. MMseqs2 taxonomy      [GitHub](https://github.com/soedinglab/MMseqs2) & [Document](https://github.com/soedinglab/mmseqs2/wiki)<br/>
 *[BERT](https://huggingface.co/google-bert/bert-base-uncased) for text embedding
 
-
-
 <br/><br/>
 
 ## ESM2 embedding (650M)
