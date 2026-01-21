@@ -2,29 +2,25 @@
 # Environment 
 🚀 Quick Start
 ```python
-### conda env setting ###
 
-# download and locate to the github repository
+
+# Clone repository
 git clone https://github.com/sj584/VFTextSeq.git
 cd VFTextSeq
 
-# conda environment creation
+# Create conda environment
 conda create -n VFTextSeq
-
-# conda activate VFTextSeq environment
 conda activate VFTextSeq
 
-# install pip
+# install pip & pytorch
 conda install pip -y
-
-# install pytorch
 conda install pytorch==2.5.1 torchvision==0.20.1 torchaudio==2.5.1 pytorch-cuda=12.4 -c pytorch -c nvidia
 
 # install other libraries using requirements.txt 
 pip install -r requirements.txt
 ```
 <br/><br/>
-# Input example (csv + fasta)
+📁 Input Format
 
 ## Example csv 
 
