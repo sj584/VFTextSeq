@@ -1,0 +1,200 @@
+VFG010431	6c6fd9e24d6d6477e9c5fa26231849e2	371	ProSitePatterns	PS00430	TonB-dependent receptor (TBDR) proteins signature 1.	1	42	-	T	21-01-2026	IPR010916	TonB box, conserved site	-	-
+VFG010431	6c6fd9e24d6d6477e9c5fa26231849e2	371	NCBIfam	TIGR00996	MCE family protein	9	299	8.2E-45	T	21-01-2026	IPR005693	Virulence factor Mce protein	-	-
+VFG010431	6c6fd9e24d6d6477e9c5fa26231849e2	371	ProSiteProfiles	PS51318	Twin arginine translocation (Tat) signal profile.	1	32	7.948362	T	21-01-2026	IPR006311	Twin-arginine translocation pathway, signal sequence	-	-
+VFG010431	6c6fd9e24d6d6477e9c5fa26231849e2	371	Coils	Coil	Coil	255	275	-	T	21-01-2026	-	-	-	-
+VFG010431	6c6fd9e24d6d6477e9c5fa26231849e2	371	PANTHER	PTHR33371	INTERMEMBRANE PHOSPHOLIPID TRANSPORT SYSTEM BINDING PROTEIN MLAD-RELATED	2	314	1.7E-41	T	21-01-2026	IPR052336	MlaD Inter-membrane Phospholipid Transporter	-	-
+VFG010431	6c6fd9e24d6d6477e9c5fa26231849e2	371	Pfam	PF02470	MlaD protein	36	111	7.6E-12	T	21-01-2026	IPR003399	Mce/MlaD	-	-
+gi|15610113|ref|NP_217492.1|	d20cdc0110026725ff7a8eb240f2c41b	227	Hamap	MF_00148	Uracil-DNA glycosylase [ung].	11	225	33.956059	T	21-01-2026	IPR002043	Uracil-DNA glycosylase family 1	-	-
+gi|15610113|ref|NP_217492.1|	d20cdc0110026725ff7a8eb240f2c41b	227	SMART	SM00986	UDG_2	53	214	9.8E-33	T	21-01-2026	IPR005122	Uracil-DNA glycosylase-like	-	-
+gi|15610113|ref|NP_217492.1|	d20cdc0110026725ff7a8eb240f2c41b	227	NCBIfam	NF003588	uracil-DNA glycosylase	1	227	1.2E-118	T	21-01-2026	-	-	-	-
+gi|15610113|ref|NP_217492.1|	d20cdc0110026725ff7a8eb240f2c41b	227	ProSitePatterns	PS00130	Uracil-DNA glycosylase signature.	61	70	-	T	21-01-2026	IPR018085	Uracil-DNA glycosylase, active site	-	-
+gi|15610113|ref|NP_217492.1|	d20cdc0110026725ff7a8eb240f2c41b	227	CDD	cd10027	UDG-F1-like	26	224	2.42862E-92	T	21-01-2026	IPR002043	Uracil-DNA glycosylase family 1	-	-
+gi|15610113|ref|NP_217492.1|	d20cdc0110026725ff7a8eb240f2c41b	227	Gene3D	G3DSA:3.40.470.10	-	1	227	2.6E-83	T	21-01-2026	IPR036895	Uracil-DNA glycosylase-like domain superfamily	-	-
+gi|15610113|ref|NP_217492.1|	d20cdc0110026725ff7a8eb240f2c41b	227	Pfam	PF03167	Uracil DNA glycosylase superfamily	57	214	6.0E-12	T	21-01-2026	IPR005122	Uracil-DNA glycosylase-like	-	-
+gi|15610113|ref|NP_217492.1|	d20cdc0110026725ff7a8eb240f2c41b	227	NCBIfam	NF003592	uracil-DNA glycosylase	10	226	2.9E-63	T	21-01-2026	-	-	-	-
+gi|15610113|ref|NP_217492.1|	d20cdc0110026725ff7a8eb240f2c41b	227	FunFam	G3DSA:3.40.470.10:FF:000006	Uracil-DNA glycosylase	1	227	5.5E-122	T	21-01-2026	-	-	-	-
+gi|15610113|ref|NP_217492.1|	d20cdc0110026725ff7a8eb240f2c41b	227	PANTHER	PTHR11264	URACIL-DNA GLYCOSYLASE	7	226	4.6E-72	T	21-01-2026	IPR002043	Uracil-DNA glycosylase family 1	-	-
+gi|15610113|ref|NP_217492.1|	d20cdc0110026725ff7a8eb240f2c41b	227	SUPERFAMILY	SSF52141	Uracil-DNA glycosylase-like	9	226	5.23E-74	T	21-01-2026	IPR036895	Uracil-DNA glycosylase-like domain superfamily	-	-
+gi|15610113|ref|NP_217492.1|	d20cdc0110026725ff7a8eb240f2c41b	227	SMART	SM00987	UDG_2_a	53	214	9.8E-33	T	21-01-2026	-	-	-	-
+gi|15610113|ref|NP_217492.1|	d20cdc0110026725ff7a8eb240f2c41b	227	NCBIfam	TIGR00628	uracil-DNA glycosylase	13	216	5.8E-57	T	21-01-2026	IPR002043	Uracil-DNA glycosylase family 1	-	-
+sp|P25377|ADH7_YEAST	2ca83c9ee1bf1233159bab6e5b8896c6	361	ProSitePatterns	PS00065	D-isomer specific 2-hydroxyacid dehydrogenases NAD-binding signature.	184	211	-	T	21-01-2026	IPR029752	D-isomer specific 2-hydroxyacid dehydrogenase, NAD-binding domain conserved site 1	-	-
+sp|P25377|ADH7_YEAST	2ca83c9ee1bf1233159bab6e5b8896c6	361	SUPERFAMILY	SSF50129	GroES-like	21	177	2.13E-45	T	21-01-2026	IPR011032	GroES-like superfamily	-	-
+sp|P25377|ADH7_YEAST	2ca83c9ee1bf1233159bab6e5b8896c6	361	Gene3D	G3DSA:3.40.50.720	-	165	301	1.3E-125	T	21-01-2026	-	-	-	-
+sp|P25377|ADH7_YEAST	2ca83c9ee1bf1233159bab6e5b8896c6	361	SUPERFAMILY	SSF51735	NAD(P)-binding Rossmann-fold domains	155	321	1.62E-36	T	21-01-2026	IPR036291	NAD(P)-binding domain superfamily	-	-
+sp|P25377|ADH7_YEAST	2ca83c9ee1bf1233159bab6e5b8896c6	361	ProSitePatterns	PS00059	Zinc-containing alcohol dehydrogenases signature.	67	81	-	T	21-01-2026	IPR002328	Alcohol dehydrogenase, zinc-type, conserved site	-	-
+sp|P25377|ADH7_YEAST	2ca83c9ee1bf1233159bab6e5b8896c6	361	Gene3D	G3DSA:3.90.180.10	-	28	350	1.3E-125	T	21-01-2026	-	-	-	-
+sp|P25377|ADH7_YEAST	2ca83c9ee1bf1233159bab6e5b8896c6	361	SMART	SM00829	PKS_ER_names_mod	16	346	1.7E-4	T	21-01-2026	IPR020843	Enoylreductase domain	-	-
+sp|P25377|ADH7_YEAST	2ca83c9ee1bf1233159bab6e5b8896c6	361	PANTHER	PTHR42683	ALDEHYDE REDUCTASE	24	352	1.1E-89	T	21-01-2026	IPR047109	Cinnamyl alcohol dehydrogenase-like	-	-
+sp|P25377|ADH7_YEAST	2ca83c9ee1bf1233159bab6e5b8896c6	361	Pfam	PF08240	Alcohol dehydrogenase GroES-like domain	32	152	8.2E-21	T	21-01-2026	IPR013154	Alcohol dehydrogenase-like, N-terminal	-	-
+sp|P25377|ADH7_YEAST	2ca83c9ee1bf1233159bab6e5b8896c6	361	FunFam	G3DSA:3.40.50.720:FF:000158	Zinc-binding alcohol dehydrogenase	165	322	4.5E-62	T	21-01-2026	-	-	-	-
+sp|P25377|ADH7_YEAST	2ca83c9ee1bf1233159bab6e5b8896c6	361	Pfam	PF00107	Zinc-binding dehydrogenase	191	316	1.8E-18	T	21-01-2026	IPR013149	Alcohol dehydrogenase-like, C-terminal	-	-
+sp|P25377|ADH7_YEAST	2ca83c9ee1bf1233159bab6e5b8896c6	361	CDD	cd05283	CAD1	8	353	3.34166E-144	T	21-01-2026	IPR047109	Cinnamyl alcohol dehydrogenase-like	-	-
+sp|Q6NCE6|RL32_RHOPA	bf99312d1443ce2be777b9689c872346	60	NCBIfam	TIGR01031	50S ribosomal protein L32	2	56	7.0E-18	T	21-01-2026	IPR002677	Large ribosomal subunit protein bL32	-	-
+sp|Q6NCE6|RL32_RHOPA	bf99312d1443ce2be777b9689c872346	60	MobiDBLite	mobidb-lite	consensus disorder prediction	1	60	-	T	21-01-2026	-	-	-	-
+sp|Q6NCE6|RL32_RHOPA	bf99312d1443ce2be777b9689c872346	60	MobiDBLite	mobidb-lite	consensus disorder prediction	17	44	-	T	21-01-2026	-	-	-	-
+sp|Q6NCE6|RL32_RHOPA	bf99312d1443ce2be777b9689c872346	60	MobiDBLite	mobidb-lite	consensus disorder prediction	1	16	-	T	21-01-2026	-	-	-	-
+sp|Q6NCE6|RL32_RHOPA	bf99312d1443ce2be777b9689c872346	60	Hamap	MF_00340	Large ribosomal subunit protein bL32 [rpmF].	1	55	18.355358	T	21-01-2026	IPR002677	Large ribosomal subunit protein bL32	-	-
+sp|Q6NCE6|RL32_RHOPA	bf99312d1443ce2be777b9689c872346	60	PANTHER	PTHR35534	50S RIBOSOMAL PROTEIN L32	1	58	5.0E-22	T	21-01-2026	IPR044957	Large ribosomal subunit protein bL32, bacterial type	-	-
+sp|Q6NCE6|RL32_RHOPA	bf99312d1443ce2be777b9689c872346	60	SUPERFAMILY	SSF57829	Zn-binding ribosomal proteins	1	55	2.81E-19	T	21-01-2026	IPR011332	Zinc-binding ribosomal protein	-	-
+sp|Q6NCE6|RL32_RHOPA	bf99312d1443ce2be777b9689c872346	60	Pfam	PF01783	Ribosomal L32p protein family	2	57	1.0E-17	T	21-01-2026	IPR002677	Large ribosomal subunit protein bL32	-	-
+sp|Q6NCE6|RL32_RHOPA	bf99312d1443ce2be777b9689c872346	60	Gene3D	G3DSA:1.20.5.640	Single helix bin	1	22	6.7E-6	T	21-01-2026	-	-	-	-
+sp|P40011|RRAAH_YEAST	684c3040458405fb75db7c4f23dc7a58	234	PANTHER	PTHR33254	4-HYDROXY-4-METHYL-2-OXOGLUTARATE ALDOLASE 3-RELATED	1	227	2.3E-27	T	21-01-2026	-	-	-	-
+sp|P40011|RRAAH_YEAST	684c3040458405fb75db7c4f23dc7a58	234	FunFam	G3DSA:3.50.30.40:FF:000003	4-hydroxy-4-methyl-2-oxoglutarate aldolase	1	234	6.8E-166	T	21-01-2026	-	-	-	-
+sp|P40011|RRAAH_YEAST	684c3040458405fb75db7c4f23dc7a58	234	Pfam	PF03737	Aldolase/RraA	12	183	4.0E-21	T	21-01-2026	IPR005493	Ribonuclease E inhibitor RraA/RraA-like protein	-	-
+sp|P40011|RRAAH_YEAST	684c3040458405fb75db7c4f23dc7a58	234	CDD	cd16841	RraA_family	13	185	4.43147E-41	T	21-01-2026	IPR005493	Ribonuclease E inhibitor RraA/RraA-like protein	-	-
+sp|P40011|RRAAH_YEAST	684c3040458405fb75db7c4f23dc7a58	234	SUPERFAMILY	SSF89562	RraA-like	8	189	5.23E-35	T	21-01-2026	IPR036704	Ribonuclease E inhibitor RraA/RraA-like superfamily	-	-
+sp|P40011|RRAAH_YEAST	684c3040458405fb75db7c4f23dc7a58	234	Gene3D	G3DSA:3.50.30.40	-	1	234	1.4E-70	T	21-01-2026	-	-	-	-
+sp|P25971|PYRF_BACSU	d13da15de20b462e1a293d055fb174e5	239	SMART	SM00934	OMPdecase_2	5	230	4.6E-89	T	21-01-2026	IPR001754	Orotidine 5'-phosphate decarboxylase domain	-	-
+sp|P25971|PYRF_BACSU	d13da15de20b462e1a293d055fb174e5	239	CDD	cd04725	OMP_decarboxylase_like	7	230	7.22614E-81	T	21-01-2026	-	-	-	-
+sp|P25971|PYRF_BACSU	d13da15de20b462e1a293d055fb174e5	239	ProSitePatterns	PS00156	Orotidine 5'-phosphate decarboxylase active site.	57	70	-	T	21-01-2026	IPR018089	Orotidine 5'-phosphate decarboxylase, active site	-	-
+sp|P25971|PYRF_BACSU	d13da15de20b462e1a293d055fb174e5	239	Pfam	PF00215	Orotidine 5'-phosphate decarboxylase / HUMPS family	7	229	1.5E-61	T	21-01-2026	IPR001754	Orotidine 5'-phosphate decarboxylase domain	-	-
+sp|P25971|PYRF_BACSU	d13da15de20b462e1a293d055fb174e5	239	NCBIfam	TIGR01740	orotidine-5'-phosphate decarboxylase	6	231	1.7E-60	T	21-01-2026	IPR014732	Orotidine 5'-phosphate decarboxylase	-	-
+sp|P25971|PYRF_BACSU	d13da15de20b462e1a293d055fb174e5	239	Hamap	MF_01200_B	Orotidine 5'-phosphate decarboxylase [pyrF].	3	235	39.292221	T	21-01-2026	IPR047596	Orotidine 5'-phosphate decarboxylase, bacterial	-	-
+sp|P25971|PYRF_BACSU	d13da15de20b462e1a293d055fb174e5	239	FunFam	G3DSA:3.20.20.70:FF:000015	Orotidine 5'-phosphate decarboxylase	1	238	1.4E-96	T	21-01-2026	-	-	-	-
+sp|P25971|PYRF_BACSU	d13da15de20b462e1a293d055fb174e5	239	NCBIfam	NF001273	orotidine-5'-phosphate decarboxylase	3	235	8.3E-87	T	21-01-2026	-	-	-	-
+sp|P25971|PYRF_BACSU	d13da15de20b462e1a293d055fb174e5	239	Gene3D	G3DSA:3.20.20.70	Aldolase class I	1	239	4.9E-83	T	21-01-2026	IPR013785	Aldolase-type TIM barrel	-	-
+sp|P25971|PYRF_BACSU	d13da15de20b462e1a293d055fb174e5	239	PANTHER	PTHR32119	OROTIDINE 5'-PHOSPHATE DECARBOXYLASE	2	235	2.7E-56	T	21-01-2026	IPR014732	Orotidine 5'-phosphate decarboxylase	-	-
+sp|P25971|PYRF_BACSU	d13da15de20b462e1a293d055fb174e5	239	SUPERFAMILY	SSF51366	Ribulose-phoshate binding barrel	1	235	2.33E-70	T	21-01-2026	IPR011060	Ribulose-phosphate binding barrel	-	-
+VFG015305	1f0abaa5709c3db584e558380faa5933	407	NCBIfam	NF041355	type III secretion system effector XopQ	3	399	1.1E-203	T	21-01-2026	-	-	-	-
+VFG015305	1f0abaa5709c3db584e558380faa5933	407	SUPERFAMILY	SSF53590	Nucleoside hydrolase	53	321	7.33E-32	T	21-01-2026	IPR036452	Ribonucleoside hydrolase-like	-	-
+VFG015305	1f0abaa5709c3db584e558380faa5933	407	Gene3D	G3DSA:3.90.245.10	-	29	405	1.3E-116	T	21-01-2026	IPR036452	Ribonucleoside hydrolase-like	-	-
+VFG007156	1538b498aa84693bc39b42af76a213f3	94	Pfam	PF09059	TyeA	6	86	7.0E-30	T	21-01-2026	IPR015144	Type III secretion system effector delivery regulator TyeA	-	-
+VFG007156	1538b498aa84693bc39b42af76a213f3	94	NCBIfam	TIGR02511	TyeA family type III secretion system gatekeeper subunit	3	84	2.5E-21	T	21-01-2026	IPR013351	Type III secretion system effector delivery regulator TyeA-related	-	-
+VFG007156	1538b498aa84693bc39b42af76a213f3	94	SUPERFAMILY	SSF140591	Type III secretion system domain	2	92	5.1E-30	T	21-01-2026	-	-	-	-
+VFG007156	1538b498aa84693bc39b42af76a213f3	94	Coils	Coil	Coil	66	86	-	T	21-01-2026	-	-	-	-
+VFG007156	1538b498aa84693bc39b42af76a213f3	94	Gene3D	G3DSA:1.20.1280.80	-	1	92	4.2E-31	T	21-01-2026	IPR038347	TyeA superfamily	-	-
+sp|P26683|SIGA_NOSS1	bd8e5d5623ecd8e13ccb74cbccf93fc7	390	CDD	cd06171	Sigma70_r4	319	377	1.65724E-13	T	21-01-2026	-	-	-	-
+sp|P26683|SIGA_NOSS1	bd8e5d5623ecd8e13ccb74cbccf93fc7	390	PANTHER	PTHR30603	RNA POLYMERASE SIGMA FACTOR RPO	56	389	6.8E-141	T	21-01-2026	IPR050239	Sigma-70 factor family, RNA polymerase initiation factors	-	-
+sp|P26683|SIGA_NOSS1	bd8e5d5623ecd8e13ccb74cbccf93fc7	390	NCBIfam	TIGR02393	RNA polymerase sigma factor RpoD	154	389	9.8E-112	T	21-01-2026	IPR012760	RNA polymerase sigma factor RpoD, C-terminal	-	-
+sp|P26683|SIGA_NOSS1	bd8e5d5623ecd8e13ccb74cbccf93fc7	390	FunFam	G3DSA:1.10.601.10:FF:000001	RNA polymerase sigma factor SigA	150	230	2.6E-42	T	21-01-2026	-	-	-	-
+sp|P26683|SIGA_NOSS1	bd8e5d5623ecd8e13ccb74cbccf93fc7	390	Pfam	PF04539	Sigma-70 region 3	237	312	6.2E-21	T	21-01-2026	IPR007624	RNA polymerase sigma-70 region 3	-	-
+sp|P26683|SIGA_NOSS1	bd8e5d5623ecd8e13ccb74cbccf93fc7	390	NCBIfam	TIGR02997	RNA polymerase sigma factor, RpoD/SigA family	80	377	1.1E-124	T	21-01-2026	IPR017848	RNA polymerase sigma factor, RpoD/SigA, cyanobacteria	-	-
+sp|P26683|SIGA_NOSS1	bd8e5d5623ecd8e13ccb74cbccf93fc7	390	MobiDBLite	mobidb-lite	consensus disorder prediction	48	57	-	T	21-01-2026	-	-	-	-
+sp|P26683|SIGA_NOSS1	bd8e5d5623ecd8e13ccb74cbccf93fc7	390	MobiDBLite	mobidb-lite	consensus disorder prediction	48	75	-	T	21-01-2026	-	-	-	-
+sp|P26683|SIGA_NOSS1	bd8e5d5623ecd8e13ccb74cbccf93fc7	390	MobiDBLite	mobidb-lite	consensus disorder prediction	62	75	-	T	21-01-2026	-	-	-	-
+sp|P26683|SIGA_NOSS1	bd8e5d5623ecd8e13ccb74cbccf93fc7	390	Gene3D	G3DSA:1.10.601.10	RNA Polymerase Primary Sigma Factor	78	123	7.3E-6	T	21-01-2026	-	-	-	-
+sp|P26683|SIGA_NOSS1	bd8e5d5623ecd8e13ccb74cbccf93fc7	390	Pfam	PF00140	Sigma-70 factor, region 1.2	80	111	1.1E-8	T	21-01-2026	IPR009042	RNA polymerase sigma-70 region 1.2	-	-
+sp|P26683|SIGA_NOSS1	bd8e5d5623ecd8e13ccb74cbccf93fc7	390	ProSitePatterns	PS00716	Sigma-70 factors family signature 2.	350	376	-	T	21-01-2026	IPR000943	RNA polymerase sigma-70	-	-
+sp|P26683|SIGA_NOSS1	bd8e5d5623ecd8e13ccb74cbccf93fc7	390	NCBIfam	TIGR02937	sigma-70 family RNA polymerase sigma factor	154	378	1.5E-37	T	21-01-2026	IPR014284	RNA polymerase sigma-70-like domain	-	-
+sp|P26683|SIGA_NOSS1	bd8e5d5623ecd8e13ccb74cbccf93fc7	390	Gene3D	G3DSA:1.10.10.10	-	231	306	1.1E-28	T	21-01-2026	IPR036388	Winged helix-like DNA-binding domain superfamily	-	-
+sp|P26683|SIGA_NOSS1	bd8e5d5623ecd8e13ccb74cbccf93fc7	390	Gene3D	G3DSA:1.10.601.10	RNA Polymerase Primary Sigma Factor	134	227	9.6E-51	T	21-01-2026	-	-	-	-
+sp|P26683|SIGA_NOSS1	bd8e5d5623ecd8e13ccb74cbccf93fc7	390	NCBIfam	NF005643	RNA polymerase sigma factor RpoD	2	390	1.6E-213	T	21-01-2026	-	-	-	-
+sp|P26683|SIGA_NOSS1	bd8e5d5623ecd8e13ccb74cbccf93fc7	390	PRINTS	PR00046	Major sigma-70 factor signature	350	365	2.0E-30	T	21-01-2026	IPR000943	RNA polymerase sigma-70	-	-
+sp|P26683|SIGA_NOSS1	bd8e5d5623ecd8e13ccb74cbccf93fc7	390	PRINTS	PR00046	Major sigma-70 factor signature	365	376	2.0E-30	T	21-01-2026	IPR000943	RNA polymerase sigma-70	-	-
+sp|P26683|SIGA_NOSS1	bd8e5d5623ecd8e13ccb74cbccf93fc7	390	PRINTS	PR00046	Major sigma-70 factor signature	182	195	2.0E-30	T	21-01-2026	IPR000943	RNA polymerase sigma-70	-	-
+sp|P26683|SIGA_NOSS1	bd8e5d5623ecd8e13ccb74cbccf93fc7	390	PRINTS	PR00046	Major sigma-70 factor signature	206	214	2.0E-30	T	21-01-2026	IPR000943	RNA polymerase sigma-70	-	-
+sp|P26683|SIGA_NOSS1	bd8e5d5623ecd8e13ccb74cbccf93fc7	390	PRINTS	PR00046	Major sigma-70 factor signature	329	341	2.0E-30	T	21-01-2026	IPR000943	RNA polymerase sigma-70	-	-
+sp|P26683|SIGA_NOSS1	bd8e5d5623ecd8e13ccb74cbccf93fc7	390	Pfam	PF04542	Sigma-70 region 2	158	228	2.0E-21	T	21-01-2026	IPR007627	RNA polymerase sigma-70 region 2	-	-
+sp|P26683|SIGA_NOSS1	bd8e5d5623ecd8e13ccb74cbccf93fc7	390	Coils	Coil	Coil	94	123	-	T	21-01-2026	-	-	-	-
+sp|P26683|SIGA_NOSS1	bd8e5d5623ecd8e13ccb74cbccf93fc7	390	Pfam	PF04545	Sigma-70, region 4	325	378	8.7E-18	T	21-01-2026	IPR007630	RNA polymerase sigma-70 region 4	-	-
+sp|P26683|SIGA_NOSS1	bd8e5d5623ecd8e13ccb74cbccf93fc7	390	Gene3D	G3DSA:1.10.10.10	-	311	390	2.4E-34	T	21-01-2026	IPR036388	Winged helix-like DNA-binding domain superfamily	-	-
+sp|P26683|SIGA_NOSS1	bd8e5d5623ecd8e13ccb74cbccf93fc7	390	ProSitePatterns	PS00715	Sigma-70 factors family signature 1.	182	195	-	T	21-01-2026	IPR000943	RNA polymerase sigma-70	-	-
+sp|P26683|SIGA_NOSS1	bd8e5d5623ecd8e13ccb74cbccf93fc7	390	SUPERFAMILY	SSF88946	Sigma2 domain of RNA polymerase sigma factors	76	228	2.67E-57	T	21-01-2026	IPR013325	RNA polymerase sigma factor, region 2	-	-
+sp|P26683|SIGA_NOSS1	bd8e5d5623ecd8e13ccb74cbccf93fc7	390	Hamap	MF_00963	RNA polymerase sigma factor RpoD [rpoD].	2	390	30.971323	T	21-01-2026	IPR028630	RNA polymerase sigma factor RpoD	-	-
+sp|P26683|SIGA_NOSS1	bd8e5d5623ecd8e13ccb74cbccf93fc7	390	SUPERFAMILY	SSF88659	Sigma3 and sigma4 domains of RNA polymerase sigma factors	288	388	1.76E-29	T	21-01-2026	IPR013324	RNA polymerase sigma factor, region 3/4-like	-	-
+sp|P26683|SIGA_NOSS1	bd8e5d5623ecd8e13ccb74cbccf93fc7	390	SUPERFAMILY	SSF88659	Sigma3 and sigma4 domains of RNA polymerase sigma factors	231	304	9.16E-19	T	21-01-2026	IPR013324	RNA polymerase sigma factor, region 3/4-like	-	-
+VFG007971	ad33701fb16f64c15b4567c1a30d12be	270	Gene3D	G3DSA:3.40.50.150	Vaccinia Virus protein VP39	42	264	4.8E-34	T	21-01-2026	IPR029063	S-adenosyl-L-methionine-dependent methyltransferase superfamily	-	-
+VFG007971	ad33701fb16f64c15b4567c1a30d12be	270	CDD	cd02440	AdoMet_MTases	83	184	1.11803E-16	T	21-01-2026	-	-	-	-
+VFG007971	ad33701fb16f64c15b4567c1a30d12be	270	NCBIfam	NF045823	phthiotriol/phenolphthiotriol dimycocerosates methyltransferase	16	270	1.1E-131	T	21-01-2026	IPR054877	Phthiotriol/phenolphthiotriol dimycocerosates methyltransferase	-	-
+VFG007971	ad33701fb16f64c15b4567c1a30d12be	270	PANTHER	PTHR42912	METHYLTRANSFERASE	68	262	5.6E-23	T	21-01-2026	IPR050508	Methyltransferase Superfamily	-	-
+VFG007971	ad33701fb16f64c15b4567c1a30d12be	270	Pfam	PF08241	Methyltransferase domain	85	179	4.2E-20	T	21-01-2026	IPR013216	Methyltransferase type 11	-	-
+VFG007971	ad33701fb16f64c15b4567c1a30d12be	270	SUPERFAMILY	SSF53335	S-adenosyl-L-methionine-dependent methyltransferases	31	191	1.39E-34	T	21-01-2026	IPR029063	S-adenosyl-L-methionine-dependent methyltransferase superfamily	-	-
+sp|Q5SHP2|RS19_THET8	83ff2f21727381510310cefaa45e4f60	93	Hamap	MF_00531	Small ribosomal subunit protein uS19 [rpsS].	1	89	25.745813	T	21-01-2026	IPR002222	Small ribosomal subunit protein uS19	-	-
+sp|Q5SHP2|RS19_THET8	83ff2f21727381510310cefaa45e4f60	93	SUPERFAMILY	SSF54570	Ribosomal protein S19	3	85	5.89E-37	T	21-01-2026	IPR023575	Small ribosomal subunit protein uS19, superfamily	-	-
+sp|Q5SHP2|RS19_THET8	83ff2f21727381510310cefaa45e4f60	93	PIRSF	PIRSF002144	RPS19p_RPS19a_RPS15e_RPS19o	1	93	1.6E-36	T	21-01-2026	IPR002222	Small ribosomal subunit protein uS19	-	-
+sp|Q5SHP2|RS19_THET8	83ff2f21727381510310cefaa45e4f60	93	FunFam	G3DSA:3.30.860.10:FF:000001	30S ribosomal protein S19	1	93	1.6E-46	T	21-01-2026	-	-	-	-
+sp|Q5SHP2|RS19_THET8	83ff2f21727381510310cefaa45e4f60	93	Gene3D	G3DSA:3.30.860.10	30s Ribosomal Protein S19; Chain A	1	93	4.7E-43	T	21-01-2026	IPR023575	Small ribosomal subunit protein uS19, superfamily	-	-
+sp|Q5SHP2|RS19_THET8	83ff2f21727381510310cefaa45e4f60	93	Pfam	PF00203	Ribosomal protein S19	3	83	4.6E-36	T	21-01-2026	IPR002222	Small ribosomal subunit protein uS19	-	-
+sp|Q5SHP2|RS19_THET8	83ff2f21727381510310cefaa45e4f60	93	PANTHER	PTHR11880	RIBOSOMAL PROTEIN S19P FAMILY MEMBER	3	92	5.4E-26	T	21-01-2026	IPR002222	Small ribosomal subunit protein uS19	-	-
+sp|Q5SHP2|RS19_THET8	83ff2f21727381510310cefaa45e4f60	93	PRINTS	PR00975	Ribosomal protein S19 family signature	33	52	2.0E-26	T	21-01-2026	IPR002222	Small ribosomal subunit protein uS19	-	-
+sp|Q5SHP2|RS19_THET8	83ff2f21727381510310cefaa45e4f60	93	PRINTS	PR00975	Ribosomal protein S19 family signature	53	65	2.0E-26	T	21-01-2026	IPR002222	Small ribosomal subunit protein uS19	-	-
+sp|Q5SHP2|RS19_THET8	83ff2f21727381510310cefaa45e4f60	93	PRINTS	PR00975	Ribosomal protein S19 family signature	65	80	2.0E-26	T	21-01-2026	IPR002222	Small ribosomal subunit protein uS19	-	-
+sp|Q5SHP2|RS19_THET8	83ff2f21727381510310cefaa45e4f60	93	NCBIfam	TIGR01050	30S ribosomal protein S19	1	92	7.3E-42	T	21-01-2026	IPR005732	Small ribosomal subunit protein uS19, bacterial-type	-	-
+sp|Q5SHP2|RS19_THET8	83ff2f21727381510310cefaa45e4f60	93	ProSitePatterns	PS00323	Ribosomal protein S19 signature.	53	77	-	T	21-01-2026	IPR020934	Small ribosomal subunit protein uS19, conserved site	-	-
+VFG042877	885acbdb4538752545a3b8cc0a6a4526	170	Gene3D	G3DSA:2.30.30.830	-	78	170	4.1E-24	T	21-01-2026	-	-	-	-
+VFG042877	885acbdb4538752545a3b8cc0a6a4526	170	Pfam	PF04351	Pilus assembly protein, PilP	24	169	7.5E-34	T	21-01-2026	IPR007446	Type IV pilus inner membrane component PilP	-	-
+VFG042877	885acbdb4538752545a3b8cc0a6a4526	170	PIRSF	PIRSF016481	PilP_PilQ	1	170	8.7E-50	T	21-01-2026	IPR007446	Type IV pilus inner membrane component PilP	-	-
+VFG042877	885acbdb4538752545a3b8cc0a6a4526	170	ProSiteProfiles	PS51257	Prokaryotic membrane lipoprotein lipid attachment site profile.	1	17	5.0	T	21-01-2026	-	-	-	-
+VFG007424	0ff37f14d568d3689c7ec977cf2cb56c	136	NCBIfam	TIGR02480	flagellar motor switch protein FliN	54	128	4.4E-29	T	21-01-2026	IPR012826	Flagellar motor switch FliN	-	-
+VFG007424	0ff37f14d568d3689c7ec977cf2cb56c	136	PRINTS	PR00956	Flagellar motor switch protein FliN signature	73	89	1.1E-27	T	21-01-2026	IPR001172	Flagellar motor switch FliN/Type III secretion HrcQb	-	-
+VFG007424	0ff37f14d568d3689c7ec977cf2cb56c	136	PRINTS	PR00956	Flagellar motor switch protein FliN signature	56	72	1.1E-27	T	21-01-2026	IPR001172	Flagellar motor switch FliN/Type III secretion HrcQb	-	-
+VFG007424	0ff37f14d568d3689c7ec977cf2cb56c	136	PRINTS	PR00956	Flagellar motor switch protein FliN signature	102	117	1.1E-27	T	21-01-2026	IPR001172	Flagellar motor switch FliN/Type III secretion HrcQb	-	-
+VFG007424	0ff37f14d568d3689c7ec977cf2cb56c	136	PRINTS	PR00956	Flagellar motor switch protein FliN signature	89	102	1.1E-27	T	21-01-2026	IPR001172	Flagellar motor switch FliN/Type III secretion HrcQb	-	-
+VFG007424	0ff37f14d568d3689c7ec977cf2cb56c	136	Pfam	PF01052	Type III flagellar switch regulator (C-ring) FliN C-term	56	126	2.2E-21	T	21-01-2026	IPR001543	Flagellar motor switch protein FliN-like, C-terminal domain	-	-
+VFG007424	0ff37f14d568d3689c7ec977cf2cb56c	136	FunFam	G3DSA:2.30.330.10:FF:000001	Flagellar motor switch protein FliN	45	136	1.8E-49	T	21-01-2026	-	-	-	-
+VFG007424	0ff37f14d568d3689c7ec977cf2cb56c	136	PANTHER	PTHR43484	-	31	135	1.7E-33	T	21-01-2026	IPR051469	Flagellar motor switch protein FliN/MopA/SpaO	-	-
+VFG007424	0ff37f14d568d3689c7ec977cf2cb56c	136	Gene3D	G3DSA:2.30.330.10	-	46	136	3.3E-30	T	21-01-2026	IPR036429	SpoA-like superfamily	-	-
+VFG007424	0ff37f14d568d3689c7ec977cf2cb56c	136	MobiDBLite	mobidb-lite	consensus disorder prediction	1	25	-	T	21-01-2026	-	-	-	-
+VFG007424	0ff37f14d568d3689c7ec977cf2cb56c	136	MobiDBLite	mobidb-lite	consensus disorder prediction	1	11	-	T	21-01-2026	-	-	-	-
+VFG007424	0ff37f14d568d3689c7ec977cf2cb56c	136	SUPERFAMILY	SSF101801	Surface presentation of antigens (SPOA)	54	134	6.02E-25	T	21-01-2026	IPR036429	SpoA-like superfamily	-	-
+VFG012131	143654430c660e8ecf3f903c0f1d171f	1209	ProSiteProfiles	PS50093	Polycystic kidney disease (PKD) domain profile.	752	839	19.561701	T	21-01-2026	IPR000601	PKD domain	-	-
+VFG012131	143654430c660e8ecf3f903c0f1d171f	1209	Pfam	PF04151	Bacterial pre-peptidase C-terminal domain	1130	1196	8.6E-8	T	21-01-2026	IPR007280	Peptidase, C-terminal, archaeal/bacterial	-	-
+VFG012131	143654430c660e8ecf3f903c0f1d171f	1209	Pfam	PF04151	Bacterial pre-peptidase C-terminal domain	1004	1073	0.013	T	21-01-2026	IPR007280	Peptidase, C-terminal, archaeal/bacterial	-	-
+VFG012131	143654430c660e8ecf3f903c0f1d171f	1209	Gene3D	G3DSA:2.60.40.10	Immunoglobulins	746	833	3.0E-25	T	21-01-2026	IPR013783	Immunoglobulin-like fold	-	-
+VFG012131	143654430c660e8ecf3f903c0f1d171f	1209	Pfam	PF01752	Collagenase	331	606	5.1E-71	T	21-01-2026	IPR002169	Peptidase M9A/M9B, collagenase, bacterial	-	-
+VFG012131	143654430c660e8ecf3f903c0f1d171f	1209	Gene3D	G3DSA:3.40.30.160	-	353	496	1.4E-51	T	21-01-2026	-	-	-	-
+VFG012131	143654430c660e8ecf3f903c0f1d171f	1209	PRINTS	PR00931	Microbial collagenase metalloprotease (M9) signature	139	157	5.4E-27	T	21-01-2026	IPR002169	Peptidase M9A/M9B, collagenase, bacterial	-	-
+VFG012131	143654430c660e8ecf3f903c0f1d171f	1209	PRINTS	PR00931	Microbial collagenase metalloprotease (M9) signature	443	459	5.4E-27	T	21-01-2026	IPR002169	Peptidase M9A/M9B, collagenase, bacterial	-	-
+VFG012131	143654430c660e8ecf3f903c0f1d171f	1209	PRINTS	PR00931	Microbial collagenase metalloprotease (M9) signature	480	498	5.4E-27	T	21-01-2026	IPR002169	Peptidase M9A/M9B, collagenase, bacterial	-	-
+VFG012131	143654430c660e8ecf3f903c0f1d171f	1209	PRINTS	PR00931	Microbial collagenase metalloprotease (M9) signature	426	440	5.4E-27	T	21-01-2026	IPR002169	Peptidase M9A/M9B, collagenase, bacterial	-	-
+VFG012131	143654430c660e8ecf3f903c0f1d171f	1209	FunFam	G3DSA:2.60.40.10:FF:000270	Cell surface protein	751	834	9.2E-22	T	21-01-2026	-	-	-	-
+VFG012131	143654430c660e8ecf3f903c0f1d171f	1209	FunFam	G3DSA:3.40.30.160:FF:000001	Microbial collagenase	353	496	2.5E-86	T	21-01-2026	-	-	-	-
+VFG012131	143654430c660e8ecf3f903c0f1d171f	1209	Coils	Coil	Coil	690	710	-	T	21-01-2026	-	-	-	-
+VFG012131	143654430c660e8ecf3f903c0f1d171f	1209	SUPERFAMILY	SSF89260	Collagen-binding domain	840	951	6.28E-17	T	21-01-2026	-	-	-	-
+VFG012131	143654430c660e8ecf3f903c0f1d171f	1209	Gene3D	G3DSA:2.60.120.380	-	968	1087	1.5E-16	T	21-01-2026	-	-	-	-
+VFG012131	143654430c660e8ecf3f903c0f1d171f	1209	Gene3D	G3DSA:2.60.120.380	-	836	955	5.4E-17	T	21-01-2026	-	-	-	-
+VFG012131	143654430c660e8ecf3f903c0f1d171f	1209	Gene3D	G3DSA:2.60.120.380	-	1093	1209	1.5E-28	T	21-01-2026	-	-	-	-
+VFG012131	143654430c660e8ecf3f903c0f1d171f	1209	Gene3D	G3DSA:3.30.980.50	-	637	745	5.4E-41	T	21-01-2026	-	-	-	-
+VFG012131	143654430c660e8ecf3f903c0f1d171f	1209	SUPERFAMILY	SSF49299	PKD domain	765	833	2.09E-19	T	21-01-2026	IPR035986	PKD domain superfamily	-	-
+VFG012131	143654430c660e8ecf3f903c0f1d171f	1209	PANTHER	PTHR13062	COLLAGENASE	36	954	6.1E-247	T	21-01-2026	-	-	-	-
+VFG012131	143654430c660e8ecf3f903c0f1d171f	1209	SMART	SM00089	PKD_9	756	835	2.2E-21	T	21-01-2026	IPR022409	PKD/Chitinase domain	-	-
+VFG012131	143654430c660e8ecf3f903c0f1d171f	1209	FunFam	G3DSA:2.60.120.380:FF:000012	Microbial collagenase	1094	1209	3.6E-43	T	21-01-2026	-	-	-	-
+VFG012131	143654430c660e8ecf3f903c0f1d171f	1209	Gene3D	G3DSA:1.10.390.20	-	497	636	4.9E-54	T	21-01-2026	-	-	-	-
+VFG012131	143654430c660e8ecf3f903c0f1d171f	1209	Pfam	PF18496	Collagenase G catalytic helper subdomain	631	747	4.2E-46	T	21-01-2026	IPR041379	Collagenase ColG-like, catalytic helper subdomain	-	-
+VFG012131	143654430c660e8ecf3f903c0f1d171f	1209	Pfam	PF08453	Peptidase family M9 N-terminal	73	254	2.8E-50	T	21-01-2026	IPR013661	Peptidase M9, collagenase, N-terminal domain	-	-
+VFG012131	143654430c660e8ecf3f903c0f1d171f	1209	CDD	cd00146	PKD	753	832	1.9532E-15	T	21-01-2026	-	-	-	-
+VFG012131	143654430c660e8ecf3f903c0f1d171f	1209	SUPERFAMILY	SSF89260	Collagen-binding domain	1096	1208	2.75E-33	T	21-01-2026	-	-	-	-
+VFG012131	143654430c660e8ecf3f903c0f1d171f	1209	Pfam	PF18911	PKD domain	750	829	1.8E-20	T	21-01-2026	IPR000601	PKD domain	-	-
+VFG012131	143654430c660e8ecf3f903c0f1d171f	1209	SUPERFAMILY	SSF89260	Collagen-binding domain	973	1086	3.66E-13	T	21-01-2026	-	-	-	-
+VFG041305	ba5fbf17064072a370ba1998c7f6897c	699	Coils	Coil	Coil	364	384	-	T	21-01-2026	-	-	-	-
+sp|E9RGS4|SECF_VIBAL	e4bb0d9b7bb63e8a5fc4e00f94d7c2d3	315	SUPERFAMILY	SSF82866	Multidrug efflux transporter AcrB transmembrane domain	74	293	8.5E-41	T	21-01-2026	-	-	-	-
+sp|E9RGS4|SECF_VIBAL	e4bb0d9b7bb63e8a5fc4e00f94d7c2d3	315	Hamap	MF_01464_B	Protein-export membrane protein SecF [secF].	11	296	28.844646	T	21-01-2026	IPR005665	Protein-export membrane protein SecF, bacterial	-	-
+sp|E9RGS4|SECF_VIBAL	e4bb0d9b7bb63e8a5fc4e00f94d7c2d3	315	FunFam	G3DSA:1.20.1640.10:FF:000006	Protein-export membrane protein SecF	103	304	6.8E-98	T	21-01-2026	-	-	-	-
+sp|E9RGS4|SECF_VIBAL	e4bb0d9b7bb63e8a5fc4e00f94d7c2d3	315	PANTHER	PTHR30081	PROTEIN-EXPORT MEMBRANE PROTEIN SEC	5	293	1.5E-68	T	21-01-2026	IPR022813	Protein-export membrane protein SecD/SecF, archaeal and bacterial	-	-
+sp|E9RGS4|SECF_VIBAL	e4bb0d9b7bb63e8a5fc4e00f94d7c2d3	315	Pfam	PF02355	Protein export membrane protein SecD/SecF, C-terminal	113	293	3.0E-67	T	21-01-2026	IPR048634	Protein export membrane protein SecD/SecF, C-terminal	-	-
+sp|E9RGS4|SECF_VIBAL	e4bb0d9b7bb63e8a5fc4e00f94d7c2d3	315	NCBIfam	TIGR00916	SecD/SecF family protein translocase subunit	118	282	6.4E-52	T	21-01-2026	IPR055344	Protein-export membrane protein SecD/SecF, C-terminal, bacterial	-	-
+sp|E9RGS4|SECF_VIBAL	e4bb0d9b7bb63e8a5fc4e00f94d7c2d3	315	Pfam	PF07549	SecD/SecF GG Motif	35	60	6.9E-7	T	21-01-2026	IPR022646	Protein-export membrane protein SecD/SecF/SecDF, conserved site	-	-
+sp|E9RGS4|SECF_VIBAL	e4bb0d9b7bb63e8a5fc4e00f94d7c2d3	315	NCBIfam	TIGR00966	protein translocase subunit SecF	12	291	1.0E-95	T	21-01-2026	IPR005665	Protein-export membrane protein SecF, bacterial	-	-
+sp|E9RGS4|SECF_VIBAL	e4bb0d9b7bb63e8a5fc4e00f94d7c2d3	315	Gene3D	G3DSA:1.20.1640.10	Multidrug efflux transporter AcrB transmembrane domain	114	298	2.1E-35	T	21-01-2026	-	-	-	-
+sp|E9RGS4|SECF_VIBAL	e4bb0d9b7bb63e8a5fc4e00f94d7c2d3	315	PRINTS	PR01755	Bacterial translocase SecF protein signature	233	248	3.9E-32	T	21-01-2026	IPR022645	Protein-export membrane protein SecD/SecF, bacterial	-	-
+sp|E9RGS4|SECF_VIBAL	e4bb0d9b7bb63e8a5fc4e00f94d7c2d3	315	PRINTS	PR01755	Bacterial translocase SecF protein signature	38	53	3.9E-32	T	21-01-2026	IPR022645	Protein-export membrane protein SecD/SecF, bacterial	-	-
+sp|E9RGS4|SECF_VIBAL	e4bb0d9b7bb63e8a5fc4e00f94d7c2d3	315	PRINTS	PR01755	Bacterial translocase SecF protein signature	201	219	3.9E-32	T	21-01-2026	IPR022645	Protein-export membrane protein SecD/SecF, bacterial	-	-
+sp|E9RGS4|SECF_VIBAL	e4bb0d9b7bb63e8a5fc4e00f94d7c2d3	315	PRINTS	PR01755	Bacterial translocase SecF protein signature	153	167	3.9E-32	T	21-01-2026	IPR022645	Protein-export membrane protein SecD/SecF, bacterial	-	-
+sp|A0A2I1BSW8|NVFC_ASPN1	743aabc03efc3ab50c7cea98d78cd2a5	257	Gene3D	G3DSA:3.40.50.720	-	1	256	7.2E-58	T	21-01-2026	-	-	-	-
+sp|A0A2I1BSW8|NVFC_ASPN1	743aabc03efc3ab50c7cea98d78cd2a5	257	PRINTS	PR00080	Short-chain dehydrogenase/reductase (SDR) superfamily signature	77	88	7.0E-8	T	21-01-2026	IPR002347	Short-chain dehydrogenase/reductase SDR	-	-
+sp|A0A2I1BSW8|NVFC_ASPN1	743aabc03efc3ab50c7cea98d78cd2a5	257	PRINTS	PR00080	Short-chain dehydrogenase/reductase (SDR) superfamily signature	151	170	7.0E-8	T	21-01-2026	IPR002347	Short-chain dehydrogenase/reductase SDR	-	-
+sp|A0A2I1BSW8|NVFC_ASPN1	743aabc03efc3ab50c7cea98d78cd2a5	257	PRINTS	PR00080	Short-chain dehydrogenase/reductase (SDR) superfamily signature	131	139	7.0E-8	T	21-01-2026	IPR002347	Short-chain dehydrogenase/reductase SDR	-	-
+sp|A0A2I1BSW8|NVFC_ASPN1	743aabc03efc3ab50c7cea98d78cd2a5	257	FunFam	G3DSA:3.40.50.720:FF:000084	Short-chain dehydrogenase reductase	1	257	6.6E-55	T	21-01-2026	-	-	-	-
+sp|A0A2I1BSW8|NVFC_ASPN1	743aabc03efc3ab50c7cea98d78cd2a5	257	PANTHER	PTHR43477	DIHYDROANTICAPSIN 7-DEHYDROGENASE	2	255	8.0E-46	T	21-01-2026	IPR051122	SDR DHRS6-like	-	-
+sp|A0A2I1BSW8|NVFC_ASPN1	743aabc03efc3ab50c7cea98d78cd2a5	257	SUPERFAMILY	SSF51735	NAD(P)-binding Rossmann-fold domains	1	255	1.05E-53	T	21-01-2026	IPR036291	NAD(P)-binding domain superfamily	-	-
+sp|A0A2I1BSW8|NVFC_ASPN1	743aabc03efc3ab50c7cea98d78cd2a5	257	CDD	cd05233	SDR_c	10	251	3.01674E-55	T	21-01-2026	-	-	-	-
+sp|A0A2I1BSW8|NVFC_ASPN1	743aabc03efc3ab50c7cea98d78cd2a5	257	Pfam	PF00106	short chain dehydrogenase	8	192	3.3E-39	T	21-01-2026	IPR002347	Short-chain dehydrogenase/reductase SDR	-	-
+sp|A0A2I1BSW8|NVFC_ASPN1	743aabc03efc3ab50c7cea98d78cd2a5	257	PRINTS	PR00081	Glucose/ribitol dehydrogenase family signature	8	25	8.4E-31	T	21-01-2026	IPR002347	Short-chain dehydrogenase/reductase SDR	-	-
+sp|A0A2I1BSW8|NVFC_ASPN1	743aabc03efc3ab50c7cea98d78cd2a5	257	PRINTS	PR00081	Glucose/ribitol dehydrogenase family signature	125	141	8.4E-31	T	21-01-2026	IPR002347	Short-chain dehydrogenase/reductase SDR	-	-
+sp|A0A2I1BSW8|NVFC_ASPN1	743aabc03efc3ab50c7cea98d78cd2a5	257	PRINTS	PR00081	Glucose/ribitol dehydrogenase family signature	172	189	8.4E-31	T	21-01-2026	IPR002347	Short-chain dehydrogenase/reductase SDR	-	-
+sp|A0A2I1BSW8|NVFC_ASPN1	743aabc03efc3ab50c7cea98d78cd2a5	257	PRINTS	PR00081	Glucose/ribitol dehydrogenase family signature	77	88	8.4E-31	T	21-01-2026	IPR002347	Short-chain dehydrogenase/reductase SDR	-	-
+sp|A0A2I1BSW8|NVFC_ASPN1	743aabc03efc3ab50c7cea98d78cd2a5	257	PRINTS	PR00081	Glucose/ribitol dehydrogenase family signature	151	170	8.4E-31	T	21-01-2026	IPR002347	Short-chain dehydrogenase/reductase SDR	-	-
+sp|A0A2I1BSW8|NVFC_ASPN1	743aabc03efc3ab50c7cea98d78cd2a5	257	PRINTS	PR00081	Glucose/ribitol dehydrogenase family signature	218	238	8.4E-31	T	21-01-2026	IPR002347	Short-chain dehydrogenase/reductase SDR	-	-
+sp|O87943|BSSA_THAAR	014b2030fbe1c33277510ae40a650160	861	Coils	Coil	Coil	205	225	-	T	21-01-2026	-	-	-	-
+sp|O87943|BSSA_THAAR	014b2030fbe1c33277510ae40a650160	861	ProSiteProfiles	PS51554	Pyruvate formate-lyase domain profile.	41	723	136.949631	T	21-01-2026	IPR004184	Pyruvate formate lyase domain	-	-
+sp|O87943|BSSA_THAAR	014b2030fbe1c33277510ae40a650160	861	CDD	cd01677	PFL2_DhaB_BssA	40	846	0.0	T	21-01-2026	-	-	-	-
+sp|O87943|BSSA_THAAR	014b2030fbe1c33277510ae40a650160	861	PANTHER	PTHR43641	FORMATE ACETYLTRANSFERASE 3-RELATED	69	847	5.7E-127	T	21-01-2026	IPR051215	Glycyl Radical Enzyme	-	-
+sp|O87943|BSSA_THAAR	014b2030fbe1c33277510ae40a650160	861	SUPERFAMILY	SSF51998	PFL-like glycyl radical enzymes	58	848	3.07E-186	T	21-01-2026	-	-	-	-
+sp|O87943|BSSA_THAAR	014b2030fbe1c33277510ae40a650160	861	Pfam	PF01228	Glycine radical	732	831	6.8E-22	T	21-01-2026	IPR001150	Glycine radical domain	-	-
+sp|O87943|BSSA_THAAR	014b2030fbe1c33277510ae40a650160	861	Pfam	PF02901	Pyruvate formate lyase-like	40	711	4.8E-164	T	21-01-2026	IPR004184	Pyruvate formate lyase domain	-	-
+sp|O87943|BSSA_THAAR	014b2030fbe1c33277510ae40a650160	861	ProSiteProfiles	PS51149	Glycine radical domain profile.	731	850	22.216877	T	21-01-2026	IPR001150	Glycine radical domain	-	-
+sp|O87943|BSSA_THAAR	014b2030fbe1c33277510ae40a650160	861	MobiDBLite	mobidb-lite	consensus disorder prediction	718	744	-	T	21-01-2026	-	-	-	-
+sp|O87943|BSSA_THAAR	014b2030fbe1c33277510ae40a650160	861	Gene3D	G3DSA:3.20.70.20	-	53	849	2.0E-212	T	21-01-2026	-	-	-	-
+VFG006137	997186725a4ceabf94a17b235485608e	183	Pfam	PF00114	Pilin (bacterial filament)	42	164	9.6E-19	T	21-01-2026	IPR001082	Fimbrial protein pilin	-	-
+VFG006137	997186725a4ceabf94a17b235485608e	183	Gene3D	G3DSA:3.30.700.10	Glycoprotein, Type 4 Pilin	34	170	5.5E-44	T	21-01-2026	-	-	-	-
+VFG006137	997186725a4ceabf94a17b235485608e	183	SUPERFAMILY	SSF54523	Pili subunits	42	166	5.76E-23	T	21-01-2026	IPR045584	Pilin-like	-	-
