@@ -21,7 +21,7 @@ python esm_embedding.py -i example.fasta -out_dir esm_emb
 InterProScan
 ```python
 # run interproscan to get annotations (several hours)
-./interproscan.sh -i example.fasta -f tsv -o example.tsv
+./interproscan.sh -i example.fasta -f tsv -o example_interproscan.tsv
 ```
 
 MMseqs2 taxonomy
