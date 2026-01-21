@@ -1,6 +1,3 @@
-torch
-torchvision
-torchaudio
 pandas
 numpy
 scikit-learn
@@ -9,4 +6,5 @@ sentence-transformers
 fair-esm
 biopython
 xgboost
+
 
