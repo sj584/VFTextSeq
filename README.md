@@ -21,6 +21,8 @@ conda install pip -y
 pip install -r requirements.txt --extra-index-url https://download.pytorch.org/whl/cu126
 ```
 
+
+
 # Data processing steps for generating embeddings
 
 1. ESM2      [ESM2 GitHub](https://github.com/facebookresearch/esm)
@@ -50,10 +52,14 @@ MAFTRIHSFLASAGNTSMYKRVWRFWYPLMTHKLGTDEIMFINWAYEEDPPMALPLEASDEPNRAHINLYHRTATQVNLS
 ## [Note] **when generating embeddings. embedding file should be saved as {id}.pt**
 
 
+
+
 ## ESM2 embedding (650M)
 ```python
 python esm_embedding.py --fasta_path example.fasta --output_dir example/esm_emb
 ```
+
+
 
 ## InterProScan
 ```python
@@ -71,6 +77,8 @@ python interpro_Bert_emb.py --input_csv example/example_interproscan_rm_dup.csv 
 
 ```
 
+
+
 ## MMseqs2 taxonomy
 ```python
 # load GTDB database (1~2 days)
@@ -85,6 +93,7 @@ python tax_tsv2csv --input_file alnRes.tsv --output_file alnRes.csv
 # get bert embedding of interproscan
 python interpro_Bert_emb.py --input_csv example/alnRes.csv --output_dir example/tax_bert_emb
 ```
+
 
 
 # Prediction
