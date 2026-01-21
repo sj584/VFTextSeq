@@ -51,7 +51,7 @@ MAFTRIHSFLASAGNTSMYKRVWRFWYPLMTHKLGTDEIMFINWAYEEDPPMALPLEASDEPNRAHINLYHRTATQVNLS
 
 ## ESM2 embedding (650M)
 ```python
-python src/esm_embedding.py --fasta_path example.fasta --output_dir example/esm_emb
+python src/esm_embedding.py --fasta_path example/example.fasta --output_dir example/esm_emb
 ```
 
 ## InterProScan
@@ -60,7 +60,7 @@ python src/esm_embedding.py --fasta_path example.fasta --output_dir example/esm_
 ./interproscan.sh -i example.fasta -f tsv -o example_interproscan.tsv
 
 # change tsv file into csv for column annotation
-python src/interpro_tsv2csv.py --tsv_file example/example.csv --output_file example/example_interproscan.csv
+python src/interpro_tsv2csv.py --tsv_file example/example_interproscan.tsv --output_file example/example_interproscan.csv
 
 # run semantic removal for interproscan
 python src/interpro_remove_semantics.py --csv_file example/example.csv --interpro_csv example/example_interproscan.csv --output_file example/example_interproscan_rm_dup.csv
