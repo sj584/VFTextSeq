@@ -81,8 +81,11 @@ mmseqs easy-taxonomy example.fasta mmseq_gtdb/gtdb alnRes tmp
 # change tsv file into csv file (add column)
 python tax_tsv2csv.py --input_file example/alnRes_lca.tsv --output_file example/alnRes_lca.csv
 
+# map taxonomy to input csv file
+python tax_map.py --lca_file example/alnRes_lca.csv --input_file example/example.csv --output_file example/example_taxonomy.csv
+
 # get bert embedding of interproscan
-python interpro_Bert_emb.py --input_csv example/alnRes_lca.csv --output_dir example/tax_bert_emb
+python interpro_Bert_emb.py --input_csv example/example_taxonomy.csv --output_dir example/tax_bert_emb
 ```
 
 
