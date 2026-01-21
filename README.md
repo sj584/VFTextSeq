@@ -20,9 +20,9 @@ conda install pip -y
 pip install -r requirements.txt --extra-index-url https://download.pytorch.org/whl/cu126
 ```
 <br/><br/>
-# Input explanation
+# Input example (csv + fasta)
 
-## Example csv Input
+## Example csv 
 
 | id              | label |
 |-----------------|-------|
@@ -30,7 +30,7 @@ pip install -r requirements.txt --extra-index-url https://download.pytorch.org/w
 | VFG007156       | 1     |
 | VFG007971       | 1     |
 
-## Example FASTA Input
+## Example FASTA 
 
 ```fasta
 >sp|P26683|SIGA_NOSS1
