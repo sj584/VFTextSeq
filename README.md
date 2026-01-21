@@ -25,13 +25,19 @@ pip install -r requirements.txt --extra-index-url https://download.pytorch.org/w
 
 ESM2 embedding (650M)
 ```python
-python esm_embedding.py --fasta_path example.fasta --out_dir esm_emb
+python esm_embedding.py --fasta_path example.fasta --output_dir esm_emb
 ```
 
 InterProScan
 ```python
 # run interproscan to get annotations (several hours)
 ./interproscan.sh -i example.fasta -f tsv -o example_interproscan.tsv
+
+# change tsv file into csv for column annotation
+python interpro_tsv2csv.py --tsv_file example/example_interproscan.tsv --output_file example/example_interproscan.csv
+
+# run semantic removal for interproscan
+python interpro_remove_semantics.py --csv_file example/example_interproscan.csv --interpro_csv example/example_interproscan.csv --output_file example/example_interproscan_rm_dup.csv
 ```
 
 MMseqs2 taxonomy
