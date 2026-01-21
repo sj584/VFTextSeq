@@ -2,6 +2,8 @@
 
 # Environment setting
 ```python
+### conda setting ###
+
 # conda environment creation
 conda create -n VFTextSeq
 
@@ -10,6 +12,7 @@ conda activate VFTextSeq
 ```
 
 ```python
+### installation ###
 # install pip
 conda install pip -y
 
