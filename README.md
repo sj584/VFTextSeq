@@ -90,8 +90,7 @@ python src/tax_map.py --lca_file example/alnRes_lca.csv --input_file example/exa
 python src/tax_Bert_emb.py --input_csv example/example_taxonomy.csv --output_dir example/tax_bert_emb
 ```
 
-
-
+<br/>
 
 # Prediction
 ```python
@@ -107,11 +106,7 @@ python src/predict.py --input_csv example/example.csv --output result.csv --esm_
 | VFG007971         | 0.9943     | 1         | 1          |
 
 ### 📚 References
-1. ESM2 - Protein language model <br/>
->>> [GitHub](https://github.com/facebookresearch/esm)
-2. InterProScan - Functional annotations <br/>
->>> [Document](https://interproscan-docs.readthedocs.io/en/v5/#)
-3. MMseqs2 taxonomy - Taxonomy search <br/>
->>> [GitHub](https://github.com/soedinglab/MMseqs2) & [Document](https://github.com/soedinglab/mmseqs2/wiki)<br/>
-4. BERT - language mode for text embedding
-*[BERT](https://huggingface.co/google-bert/bert-base-uncased) 
+1. ESM2 - Protein language model [GitHub](https://github.com/facebookresearch/esm)
+2. InterProScan - Functional annotations [Document](https://interproscan-docs.readthedocs.io/en/v5/#)
+3. MMseqs2 taxonomy - Taxonomy search [GitHub](https://github.com/soedinglab/MMseqs2) & [Document](https://github.com/soedinglab/mmseqs2/wiki)<br/>
+4. BERT - language mode for text embedding [BERT](https://huggingface.co/google-bert/bert-base-uncased) 
