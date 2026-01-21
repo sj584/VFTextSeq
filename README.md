@@ -71,6 +71,7 @@ python src/interpro_Bert_emb.py --input_csv example/example_interproscan_rm_dup.
 ```
 
 <br/>
+
 ### 3. MMseqs2 Taxonomy
 
 ```python
