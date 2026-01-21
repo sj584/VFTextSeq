@@ -31,7 +31,7 @@ pip install -r requirements.txt
 | VFG007156       | 1     |
 | VFG007971       | 1     |
 
-**Note:** **label** column is not necessary -> Prediction
+**Note:** **label column is not necessary -> Prediction**
 
 ## Example FASTA 
 
