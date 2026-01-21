@@ -1,6 +1,6 @@
 # VFTextSeq <br/>
 # Environment 
-🚀 Quick Start
+# 🚀 Quick Start
 ```python
 
 
@@ -20,7 +20,7 @@ conda install pytorch==2.5.1 torchvision==0.20.1 torchaudio==2.5.1 pytorch-cuda=
 pip install -r requirements.txt
 ```
 <br/><br/>
-📁 Input Format
+# 📁 Input Format
 
 ## Example csv 
 
@@ -46,7 +46,7 @@ MAFTRIHSFLASAGNTSMYKRVWRFWYPLMTHKLGTDEIMFINWAYEEDPPMALPLEASDEPNRAHINLYHRTATQVNLS
 
 **Note:** Embedding files must be saved as **{id}**.pt
 
-🧬 Embedding Generation Pipeline
+# 🧬 Embedding Generation Pipeline
 
 <br/><br/>
 
@@ -108,7 +108,7 @@ python src/predict.py --input_csv example/example.csv --output result.csv --esm_
 | VFG007156         | 0.9783     | 1         | 1          |
 | VFG007971         | 0.9943     | 1         | 1          |
 
-📚 References
+# 📚 References
 1. ESM2 - Protein language model <br/>
 >>> [GitHub](https://github.com/facebookresearch/esm)
 2. InterProScan - Functional annotations <br/>
