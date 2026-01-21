@@ -58,3 +58,9 @@ python tax_tsv2csv --input_file alnRes.tsv --output_file alnRes.csv
 # get bert embedding of interproscan
 python interpro_Bert_emb.py --input_csv example/alnRes.csv --output_dir example/tax_bert_emb
 ```
+
+
+# Prediction
+```python
+python predict.py --input_csv example.csv --output result.csv --esm_emb example/esm_emb --interproscan_emb example/interproscan_emb --tax_emb example/interproscan_bert_emb
+```
