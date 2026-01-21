@@ -88,5 +88,5 @@ python interpro_Bert_emb.py --input_csv example/alnRes.csv --output_dir example/
 
 # Prediction
 ```python
-python predict.py --input_csv example/example.csv --output result.csv --esm_emb example/esm_emb --interproscan_emb example/interproscan_emb --tax_emb example/interproscan_bert_emb
+python predict.py --input_csv example/example.csv --output result.csv --esm_emb example/esm_emb --interproscan_emb example/interproscan_bert_emb --tax_emb example/tax_bert_emb
 ```
