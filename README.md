@@ -82,7 +82,7 @@ mmseqs easy-taxonomy example.fasta mmseq_gtdb/gtdb alnRes tmp
 python tax_tsv2csv --input_file example/alnRes_lca.tsv --output_file example/alnRes_lca.csv
 
 # get bert embedding of interproscan
-python interpro_Bert_emb.py --input_csv example/alnRes.csv --output_dir example/tax_bert_emb
+python interpro_Bert_emb.py --input_csv example/alnRes_lca.csv --output_dir example/tax_bert_emb
 ```
 
 
