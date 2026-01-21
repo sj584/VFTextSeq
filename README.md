@@ -8,8 +8,11 @@ conda create -n VFTextSeq
 # conda activate VFTextSeq environment
 conda activate VFTextSeq
 
-# install
+### installation
+### you can use any library versions according to your system environment
+# pip install
 conda install pip -y
+# install using requirements.txt (pytorch to avoid version)
 pip install -r requirements.txt --extra-index-url https://download.pytorch.org/whl/cu126
 ```
 
