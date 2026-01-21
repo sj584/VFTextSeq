@@ -18,7 +18,7 @@ conda install pytorch==2.5.1 torchvision==0.20.1 torchaudio==2.5.1 pytorch-cuda=
 # install other libraries using requirements.txt 
 pip install -r requirements.txt
 ```
-<br/><br/>
+<br/>
 ## 📁 Input Format
 
 ### Example csv 
