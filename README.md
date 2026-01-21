@@ -53,9 +53,7 @@ MAFTRIHSFLASAGNTSMYKRVWRFWYPLMTHKLGTDEIMFINWAYEEDPPMALPLEASDEPNRAHINLYHRTATQVNLS
 ```python
 python esm_embedding.py --fasta_path example.fasta --output_dir example/esm_emb
 ```
-<br>
-<br>
-<br>
+
 ## InterProScan
 ```python
 # run interproscan to get annotations (several hours)
@@ -87,7 +85,7 @@ python tax_tsv2csv --input_file alnRes.tsv --output_file alnRes.csv
 python interpro_Bert_emb.py --input_csv example/alnRes.csv --output_dir example/tax_bert_emb
 ```
 
-<br>
+
 # Prediction
 ```python
 python predict.py --input_csv example/example.csv --output result.csv --esm_emb example/esm_emb --interproscan_emb example/interproscan_emb --tax_emb example/interproscan_bert_emb
