@@ -52,7 +52,9 @@ MAFTRIHSFLASAGNTSMYKRVWRFWYPLMTHKLGTDEIMFINWAYEEDPPMALPLEASDEPNRAHINLYHRTATQVNLS
 ```python
 python src/esm_embedding.py --fasta_path example/example.fasta --output_dir example/esm_emb
 ```
+
 <br/><br/>
+
 ## InterProScan
 ```python
 # run interproscan to get annotations (several hours)
@@ -66,9 +68,10 @@ python src/interpro_remove_semantics.py --csv_file example/example.csv --interpr
 
 # get bert embedding of interproscan
 python src/interpro_Bert_emb.py --input_csv example/example_interproscan_rm_dup.csv --output_dir example/interproscan_bert_emb
-
 ```
+
 <br/><br/>
+
 ## MMseqs2 taxonomy
 ```python
 # load GTDB database (1~2 days)
