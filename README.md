@@ -107,7 +107,7 @@ python src/predict.py --input_csv example/example_nolabel.csv --output result_no
 
 <br/>
 
-## Model Prediction Results
+## 📁 Model Prediction Results
 
 | id                | prob | pred | label |
 |-------------------|-------------|-----------|------------|
