@@ -8,7 +8,7 @@ git clone https://github.com/sj584/VFTextSeq.git
 cd VFTextSeq
 
 # Create conda environment
-conda create -n VFTextSeq
+conda create -n VFTextSeq python=3.11
 conda activate VFTextSeq
 
 # install pip & pytorch
