@@ -105,7 +105,7 @@ python src/predict.py --input_csv example/example_nolabel.csv --output result_no
 
 <br/>
 
-## Model Prediction Results
+## 📁 Model Prediction Results
 
 | id                | prob | pred | label |
 |-------------------|-------------|-----------|------------|
@@ -116,7 +116,7 @@ python src/predict.py --input_csv example/example_nolabel.csv --output result_no
 <br/>
 
 | id                | prob | pred |
-|-------------------|-------------|
+|-------------------|-------------|-----------|
 | sp\|P26683\|SIGA_NOSS1 | 0.0135     | 0         |
 | VFG007156         | 0.9783     | 1         | 
 | VFG007971         | 0.9943     | 1         |
