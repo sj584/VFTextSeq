@@ -86,7 +86,7 @@ python src/bert_embedding.py -i example/example_taxonomy.csv -t "lca" -o example
 
 # Prediction
 ```bash
-python src/predict.py \--input_fasta example/example.fasta \--output example/example_results.csv \--esm_emb example/esm_emb \--interproscan_emb example/interproscan_bert_emb \--tax_emb example/tax_bert_emb
+python src/predict.py \<br/>--input_fasta example/example.fasta \<br/>--output example/example_results.csv \<br/>--esm_emb example/esm_emb \<br/>--interproscan_emb example/interproscan_bert_emb \<br/>--tax_emb example/tax_bert_emb
 ```
 
 
