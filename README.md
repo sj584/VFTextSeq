@@ -111,7 +111,7 @@ python src/predict.py \
 
 <br/>
 
-### 📚 References
+## 📚 References
 1. ESM2 - Protein language model [GitHub](https://github.com/facebookresearch/esm)
 2. InterProScan - Functional annotations [Document](https://interproscan-docs.readthedocs.io/en/v5/#)
 3. MMseqs2 taxonomy - Taxonomy search [GitHub](https://github.com/soedinglab/MMseqs2) & [Document](https://github.com/soedinglab/mmseqs2/wiki)<br/>
