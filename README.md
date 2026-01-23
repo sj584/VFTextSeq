@@ -13,7 +13,7 @@ conda create -n VFTextSeq python=3.10
 conda activate VFTextSeq
 
 # install pytorch & pip
-conda install pytorch==2.1.0 torchvision==0.16.0 torchaudio==2.1.0 pytorch-cuda=11.8 -c pytorch -c nvidia
+conda install pytorch==2.2.2 torchvision==0.17.2 torchaudio==2.2.2 pytorch-cuda=12.1 -c pytorch -c nvidia
 conda install pip -y
 
 # install other libraries using requirements.txt 
