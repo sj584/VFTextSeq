@@ -23,16 +23,6 @@ pip install -r requirements.txt
 
 ## 📁 Input Format
 
-### Example csv 
-
-| id              | label |
-|-----------------|-------|
-| sp&#124;P26683&#124;SIGA_NOSS1 | 0     |
-| VFG007156       | 1     |
-| VFG007971       | 1     |
-
-**Note:** **label column is not necessary -> Prediction**
-
 ## Example FASTA 
 
 ```fasta
@@ -106,12 +96,6 @@ python src/predict.py --input_csv example/example_nolabel.csv --output result_no
 <br/>
 
 ## 📁 Model Prediction Results
-
-| id                | prob | pred | label |
-|-------------------|-------------|-----------|------------|
-| sp\|P26683\|SIGA_NOSS1 | 0.0135     | 0         | 0          |
-| VFG007156         | 0.9783     | 1         | 1          |
-| VFG007971         | 0.9943     | 1         | 1          |
 
 <br/>
 
