@@ -3,7 +3,7 @@
 predict.py - Predict virulence factors using best_binary_xgb_model.pkl
 Usage: python predict.py --input_csv example/example.csv --output result.csv --esm_emb example/esm_emb --interproscan_emb example/interproscan_bert_emb --tax_emb example/tax_bert_emb
 """
-
+from Bio import SeqIO
 import argparse
 import os
 import torch
@@ -12,23 +12,21 @@ import pandas as pd
 import joblib
 from tqdm import tqdm
 
-def load_multiple_embeddings(df, emb_dirs):
+def load_multiple_embeddings(fasta_path, emb_dirs):
     """
-    Load and concatenate embeddings from multiple directories for the same ids in df.
+    Load and concatenate embeddings for FASTA record IDs.
     Args:
-        df: DataFrame with columns ['id', 'label']
+        fasta_path: Path to FASTA file
         emb_dirs: list of 3 paths to embedding directories
     Returns:
-        features: np.ndarray of concatenated embeddings from all three sources
-        labels: np.ndarray of labels
+        features: np.ndarray of concatenated embeddings
+        ids: list of corresponding FASTA record IDs
     """
+    # Parse FASTA to get IDs
+    ids = [record.id for record in SeqIO.parse(fasta_path, "fasta")]
+
     features = []
-    labels = []
-
-    for idx in tqdm(range(len(df)), desc="Loading embeddings"):
-        id_ = df.iloc[idx]['id']
-        label = df.iloc[idx]['label']
-
+    for id_ in tqdm(ids, desc="Loading embeddings"):
         emb_list = []
         for emb_dir in emb_dirs:
             emb_path = os.path.join(emb_dir, f'{id_}.pt')
@@ -46,59 +44,52 @@ def load_multiple_embeddings(df, emb_dirs):
 
         concatenated_emb = np.concatenate(emb_list)
         features.append(concatenated_emb)
-        labels.append(label)
 
     features = np.stack(features)
-    labels = np.array(labels)
-    return features, labels
+    return features, ids
 
 def main():
     parser = argparse.ArgumentParser(description='Predict using trained XGBoost model')
-    parser.add_argument('--input_csv', required=True, help='Path to input CSV with id and label columns')
-    parser.add_argument('--output', required=True, help='Output CSV path for predictions')
-    parser.add_argument('--esm_emb', required=True, help='Directory with ESM embeddings (*.pt)')
-    parser.add_argument('--interproscan_emb', required=True, help='Directory with InterProScan BERT embeddings (*.pt)')
-    parser.add_argument('--tax_emb', required=True, help='Directory with taxonomy BERT embeddings (*.pt)')
+    parser.add_argument('--input_fasta', required=True,
+                        help='Path to input FASTA')
+    parser.add_argument('--output', required=True,
+                        help='Output CSV path for predictions')
+    parser.add_argument('--model_path', default='best_binary_xgb_model.pkl',
+                        help='Path to XGBoost model pickle file')
+    parser.add_argument('--esm_emb', required=True,
+                        help='Directory with ESM embeddings (*.pt)')
+    parser.add_argument('--interproscan_emb', required=True,
+                        help='Directory with InterProScan BERT embeddings (*.pt)')
+    parser.add_argument('--tax_emb', required=True,
+                        help='Directory with taxonomy BERT embeddings (*.pt)')
+    parser.add_argument('--threshold', type=float, default=0.5,
+                        help='Threshold for binary prediction (default: 0.5) [0,1]')
     args = parser.parse_args()
 
-    # Verify model exists
-    if not os.path.exists('best_binary_xgb_model.pkl'):
-        raise FileNotFoundError("best_binary_xgb_model.pkl not found in current directory")
+    if not os.path.exists(args.model_path):
+        raise FileNotFoundError(f"{args.model_path} not found")
 
-    # Load model
     print("Loading XGBoost model...")
-    loaded_model = joblib.load('best_binary_xgb_model.pkl')
+    loaded_model = joblib.load(args.model_path)
 
-    # Load input CSV
-    print(f"Loading input CSV: {args.input_csv}")
-    df = pd.read_csv(args.input_csv)
-    if not all(col in df.columns for col in ['id', 'label']):
-        raise ValueError("Input CSV must have 'id' and 'label' columns")
-
-    # Load embeddings
     emb_dirs = [args.esm_emb, args.interproscan_emb, args.tax_emb]
     print("Loading embeddings...")
-    X, y_labels = load_multiple_embeddings(df, emb_dirs)
+    X, ids = load_multiple_embeddings(args.input_fasta, emb_dirs)
 
-    # Predict
     print("Making predictions...")
     probabilities = loaded_model.predict_proba(X)[:, 1]
-    predictions = loaded_model.predict(X)
+    predictions = (probabilities >= args.threshold).astype(int)
 
-    # Prepare result dataframe
     result_df = pd.DataFrame({
-        'id': df['id'],
+        'id': ids,
         'prob': probabilities,
         'pred': predictions,
-        'label': y_labels
     })
 
-    # Save results
     print(f"Saving results to: {args.output}")
     result_df.to_csv(args.output, index=False)
-    print(f"Prediction complete! Shape: {result_df.shape}")
+    print(f"Prediction complete! Shape: {result_df.shape} (threshold={args.threshold})")
     print(result_df.head())
 
 if __name__ == '__main__':
     main()
-
