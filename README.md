@@ -24,7 +24,7 @@ pip install -r requirements.txt
 
 ## 📁 Input Format
 
-## Example FASTA 
+### Example FASTA 
 
 ```fasta
 >sp|P26683|SIGA_NOSS1
@@ -100,7 +100,7 @@ python src/predict.py \
 <br/>
 
 ## 📁 Model Prediction Results
-
+### Example result csv file
 <br/>
 
 | id                | prob | pred |
