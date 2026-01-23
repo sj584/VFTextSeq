@@ -1,9 +1,9 @@
 pandas==2.2.3
 numpy==1.26.4
-scipy==1.11.4
-scikit-learn==1.4.2
-transformers==4.46.3
-xgboost==2.0.3
-sentence-transformers
-fair-esm
-biopython
+scipy==1.15.3
+scikit-learn==1.7.1
+transformers==4.49.0
+xgboost==2.1.1
+sentence-transformers==5.2.0
+fair-esm==1.0.3
+biopython==1.85
