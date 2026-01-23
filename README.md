@@ -86,12 +86,9 @@ python src/bert_embedding.py -i example/example_taxonomy.csv -t "lca" -o example
 
 # Prediction
 ```bash
-python src/predict.py --input_csv example/example.csv --output result.csv --esm_emb example/esm_emb --interproscan_emb example/interproscan_bert_emb --tax_emb example/tax_bert_emb
+python src/predict.py \--input_fasta example/example.fasta \--output example/example_results.csv \--esm_emb example/esm_emb \--interproscan_emb example/interproscan_bert_emb \--tax_emb example/tax_bert_emb
 ```
 
-```bash
-python src/predict.py --input_csv example/example_nolabel.csv --output result_nolabel.csv --esm_emb example/esm_emb --interproscan_emb example/interproscan_bert_emb --tax_emb example/tax_bert_emb
-```
 
 <br/>
 
