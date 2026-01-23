@@ -37,7 +37,7 @@ MAFTRIHSFLASAGNTSMYKRVWRFWYPLMTHKLGTDEIMFINWAYEEDPPMALPLEASDEPNRAHINLYHRTATQVNLS
 <br/><br/>
 # 🧬Data processing steps for generating embeddings<br/>
 
-**Note:** Embedding files must be saved as **{id}**.pt
+**Note:** Embedding files must be saved as **{header}**.pt
 
 <br/>
 
