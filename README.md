@@ -100,7 +100,7 @@ python src/predict.py \
 <br/>
 
 ## 📁 Model Prediction Results
-### Example result csv file
+### Example CSV
 <br/>
 
 | id                | prob | pred |
