@@ -85,7 +85,7 @@ mmseqs easy-taxonomy example.fasta mmseq_gtdb/gtdb alnRes tmp
 
 # preprocess taxonomy data
 # 1. convert tsv into csv
-# 2. Remove redundant texts from the annotations
+# 2. map the LCA annotations to the input 
 python src/preprocess.py -d example/example.fasta -i example/alnRes_lca.tsv -t "lca" -o example/example_taxonomy.csv
 
 # 3. get bert embedding of interproscan
