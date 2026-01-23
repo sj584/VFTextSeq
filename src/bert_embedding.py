@@ -48,4 +48,4 @@ if __name__ == "__main__":
     print("Input CSV:", args.input)
     print("Output dir:", args.output)
     os.makedirs(args.output, exist_ok=True)
-    embed_and_save(args.type, df, args.output_dir, tokenizer, model, device)
+    embed_and_save(args.type, df, args.output, tokenizer, model, device)
