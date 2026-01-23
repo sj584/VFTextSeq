@@ -109,6 +109,8 @@ python src/predict.py \
 | VFG007156         | 0.9783     | 1         | 
 | VFG007971         | 0.9943     | 1         |
 
+<br/>
+
 ### 📚 References
 1. ESM2 - Protein language model [GitHub](https://github.com/facebookresearch/esm)
 2. InterProScan - Functional annotations [Document](https://interproscan-docs.readthedocs.io/en/v5/#)
