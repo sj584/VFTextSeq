@@ -1,0 +1,10 @@
+# Python cache
+__pycache__/
+
+# Data
+data/
+
+# Extra
+proteinclip/
+**/prott5_emb.py
+**/proteinclip_embedding_esm2.py

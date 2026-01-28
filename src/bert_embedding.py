@@ -1,9 +1,11 @@
-import torch
-from transformers import AutoModel, AutoTokenizer
-import pandas as pd
-from tqdm import tqdm
-import os
 import argparse
+import os
+
+import pandas as pd
+import torch
+from tqdm import tqdm
+from transformers import AutoModel, AutoTokenizer
+
 
 def get_embedding(text, tokenizer, model, device):
     inputs = tokenizer(text, return_tensors="pt", truncation=True, max_length=512)

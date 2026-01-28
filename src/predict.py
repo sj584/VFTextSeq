@@ -3,14 +3,16 @@
 predict.py - Predict virulence factors using best_binary_xgb_model.pkl
 Usage: python predict.py --input_csv example/example.csv --output result.csv --esm_emb example/esm_emb --interproscan_emb example/interproscan_bert_emb --tax_emb example/tax_bert_emb
 """
-from Bio import SeqIO
 import argparse
 import os
-import torch
+
+import joblib
 import numpy as np
 import pandas as pd
-import joblib
+import torch
+from Bio import SeqIO
 from tqdm import tqdm
+
 
 def load_multiple_embeddings(fasta_path, emb_dirs):
     """
