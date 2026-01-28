@@ -5,6 +5,7 @@ __pycache__/
 data/
 
 # Extra
+visualization/
 proteinclip/
 **/prott5_emb.py
 **/proteinclip_embedding_esm2.py

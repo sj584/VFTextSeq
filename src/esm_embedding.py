@@ -4,10 +4,9 @@ import os
 import numpy as np
 import torch
 from Bio import SeqIO
-# from esm import pretrained
 from tqdm import tqdm
 
-from .preprocess import fasta_to_df
+from src.preprocess import fasta_to_df
 
 # for record in SeqIO.parse(args.fasta_path, "fasta"):
 #     header = record.id
@@ -64,8 +63,6 @@ from .preprocess import fasta_to_df
 # ESM2
 def esm_extract(df, model="esm2_t33_650M_UR50D", layer=33, batch_size=1, device="cuda:5"):
     device = torch.device(device if torch.cuda.is_available() else "cpu")
-    # model, alphabet = pretrained.esm2_t33_650M_UR50D()
-    # batch_converter = alphabet.get_batch_converter()
     model, alphabet = torch.hub.load("facebookresearch/esm:main", model)
     batch_converter = alphabet.get_batch_converter()    
     model = model.to(device)
@@ -87,10 +84,8 @@ def esm_extract(df, model="esm2_t33_650M_UR50D", layer=33, batch_size=1, device=
             embeddings = token_representations[i, 1: tokens_len - 1]
             emb_sum = embeddings.mean(0)
             sequence_representations.append(emb_sum.cpu().numpy().tolist())
-    print(len(sequence_representations))
     X = np.array(sequence_representations)
-    y = df.label.values
-    return X, y
+    return X
 
 
 def main():
@@ -110,7 +105,7 @@ def main():
 
     else:
         df = fasta_to_df(args.fasta_path)
-        seq_emb, _ = esm_extract(df)
+        seq_emb = esm_extract(df)
         np.save(seq_emb, output_file)
 
 if __name__ == "__main__":
