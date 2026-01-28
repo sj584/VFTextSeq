@@ -6,7 +6,7 @@ import torch
 from Bio import SeqIO
 from tqdm import tqdm
 
-from preprocess import fasta_to_df
+from .preprocess import fasta_to_df
 
 # ESM2
 def esm_extract(df, model="esm2_t33_650M_UR50D", layer=33, batch_size=1, device="cuda:5"):
@@ -57,4 +57,5 @@ def main():
         np.save(output_file, seq_emb)
 
 if __name__ == "__main__":
+
     main()
