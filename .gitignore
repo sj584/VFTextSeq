@@ -3,6 +3,7 @@ __pycache__/
 
 # Data
 data/
+example/
 
 # Extra
 visualization/
