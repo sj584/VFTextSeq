@@ -1,4 +1,6 @@
 import argparse
+import os
+from pathlib import Path
 
 import pandas as pd
 from Bio import SeqIO
@@ -109,59 +111,60 @@ def map_by_substring(row_id, tax_df):
 
 def main():
     parser = argparse.ArgumentParser(description="Preprocess retrieved texts and map to original data.")
-    parser.add_argument("--input", "-i", required=True, help="Path to input InterProScan or LCA .tsv file")
-    parser.add_argument("--data", "-d", required=True, help="Path to test data (.fasta)")
-    parser.add_argument("--type", "-t", default="lca", required=True, help="'interproscan' or 'lca'")
-    parser.add_argument("--output", "-o", required=True, help="Path to output .csv file")
+    parser.add_argument("--input_dir", "-i", required=True, help="Path to input file (.fasta or .csv)")
+    parser.add_argument("--interproscan_path", "-ip", required=True, help="Path to InterProScan .tsv output file")
+    parser.add_argument("--mmseqs_path", "-mp", required=True, help="Path to MMseqs2 Taxonomy .tsv output file")
     parser.add_argument("--similarity_threshold", type=float, default=0.85, help="Semantic similarity threshold (default: 0.85)")
+    parser.add_argument(
+        "--output_dir", "-o",
+        type=str,
+        default=None,
+        help="Output directory (default: same directory as input file)"
+    )
 
     args = parser.parse_args()
     
-    df = fasta_to_df(args.data)
+    input_path = Path(args.input_dir)
+    if args.output_dir is None:
+        args.output_dir = str(input_path.parent)
 
-    if args.type == "interproscan":
-        print(f"Processing {args.input}...")
-        scan_df = parse_interproscan_file(args.input)
-        # iscan.to_csv(args.output, index=False)
-        # print(f"Saved to {args.output} (shape: {df.shape})")
+    os.makedirs(args.output_dir, exist_ok=True)
 
-        # Build description / map (hardcoded standard columns)
-        desc_cols = ["Signature Description", "InterPro Description"]
-        description_dict = build_interpro_description(scan_df, "id", desc_cols)
-        df["desc"] = df["id"].map(lambda x: description_dict.get(str(x), ""))
-    
-        # Load model and remove duplicates
-        model = SentenceTransformer("all-MiniLM-L6-v2")
-        tqdm.pandas()
-        df["desc_nodup"] = df["desc"].progress_apply(
-            lambda x: remove_semantic_duplicates_from_pipe_separated(x, model, args.similarity_threshold)
-        )
-        # Remove duplicates after processing (keep first row per protein ID/MD5) -> take only descriptions
-        df_unique = df.drop_duplicates(subset=["id"], keep="first")[["id", "desc", "desc_nodup"]]
-        # Save
-        df_unique.to_csv(args.output, index=False)
-        print(f"Processed data (unique proteins: {len(df_unique)}) saved to {args.output}")
-
-
-    elif args.type == "lca":
-        tax_df = parse_mmseqs_lca(args.input)
-        # tax_df.to_csv(args.output, index=False)
-        # print(f"Parsed {len(tax_df)} records from {args.input} to {args.output}")
-
-        # Map taxonomy
-        tax_cols = df["id"].apply(lambda x: map_by_substring(x, tax_df))
-        df["taxid"] = tax_cols.apply(lambda x: x[0])
-        df["rank"] = tax_cols.apply(lambda x: x[1])
-        df["name"] = tax_cols.apply(lambda x: x[2])
-
-        # Save
-        df.to_csv(args.output, index=False)
-        print(f"Mapped taxonomy for {len(df)} rows to {args.output}")
-        print(f"Taxonomy coverage: {df['taxid'].notna().sum()}/{len(df)} ({df['taxid'].notna().mean():.1%})")
-
+    print(f"Processing {args.input_dir}...")
+    input_path = Path(args.input_dir)
+    if input_path.suffix.lower() in {".fasta", ".fa", ".faa"}:
+        df = fasta_to_df(input_path)
+    elif input_path.suffix.lower() == ".csv":
+        df = pd.read_csv(input_path)
     else:
-        ValueError("Data type must be either 'interproscan' or 'lca'")
+        raise ValueError(f"Unsupported input format: {input_path.suffix}")
+
+    file_name = input_path.stem
+
+    # Description
+    scan_df = parse_interproscan_file(args.interproscan_path)
+    desc_cols = ["Signature Description", "InterPro Description"]
+    description_dict = build_interpro_description(scan_df, "id", desc_cols)
+    df["desc"] = df["id"].map(lambda x: description_dict.get(str(x), ""))
+    model = SentenceTransformer("all-MiniLM-L6-v2")
+    tqdm.pandas()
+    df["desc_nodup"] = df["desc"].progress_apply(
+        lambda x: remove_semantic_duplicates_from_pipe_separated(x, model, args.similarity_threshold)
+    )
+    df = df.drop_duplicates(subset=["id"], keep="first")[["id", "sequence", "desc", "desc_nodup"]]
+
+    # Taxonomy
+    tax_df = parse_mmseqs_lca(args.mmseqs_path)
+    tax_cols = df["id"].apply(lambda x: map_by_substring(x, tax_df))
+    df["taxid"] = tax_cols.apply(lambda x: x[0])
+    df["rank"] = tax_cols.apply(lambda x: x[1])
+    df["name"] = tax_cols.apply(lambda x: x[2])
+
+    # Save
+    out_dir = os.path.join(args.output_dir, f"{file_name}_preprocessed.csv")
+    df.to_csv(out_dir, index=False)
+    print(f"Processed data (unique proteins: {len(df)}) saved to {args.output_dir}\n")
+    print(f"Taxonomy coverage: {df['taxid'].notna().sum()}/{len(df)} ({df['taxid'].notna().mean():.1%})")
 
 if __name__ == "__main__":
     main()
-    

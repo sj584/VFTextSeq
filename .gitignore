@@ -4,6 +4,7 @@ __pycache__/
 # Data
 data/
 example/
+results/
 
 # Extra
 visualization/

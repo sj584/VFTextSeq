@@ -38,63 +38,45 @@ MAFTRIHSFLASAGNTSMYKRVWRFWYPLMTHKLGTDEIMFINWAYEEDPPMALPLEASDEPNRAHINLYHRTATQVNLS
 <br/><br/>
 # 🧬Data processing steps for generating embeddings<br/>
 
-**Note:** Embedding files must be saved as **{header}**.pt
-
 <br/>
 
-### 1. ESM2 Embeddings (650M)
+### 1. Preprocess input data
 ```bash
-python src/esm_embedding.py --fasta_path example/example.fasta --output_dir example/esm_emb
-```
-
-<br/>
-
-### 2. InterProScan Annotations
-```bash
-# run interproscan to get annotations (several hours)
+# 1. InterProScan
+# 1.1 run interproscan to get annotations (several hours)
 ./interproscan.sh -i example.fasta -f tsv -o example_interproscan.tsv
 
-# preprocess interproscan data
-# 1. convert tsv into csv
-# 2. Remove redundant texts from the annotations
-python src/preprocess.py -d example/example.fasta -i example/example_interproscan.tsv -t "interproscan" -o example/example_interproscan.csv
+# 2. MMseqs2 Taxonomy
+# 2-1. load GTDB database (1~2 days)
+mmseqs database GTDB mmseqs_gtdb/gtdb tmp
+# 2-2. run taxonomy search on the database (several hours)
+mmseqs easy-taxonomy example.fasta mmseq_gtdb/gtdb alnRes tmp
 
-# 3. get bert embedding of interproscan data
-python src/bert_embedding.py -i example/example_interproscan.csv -t "interproscan" -o example/interproscan_bert_emb
+# 3. preprocess text data (.tsv files)
+# 3-1. convert tsv into csv
+# 3-2. remove redundant texts (interproscan) from the annotations
+python src/preprocess.py -i example/example.fasta -ip example/example_interproscan.tsv -mp example/alnRes_lca.tsv
+# outputs are saved at the same directory as the input fasta file
+# e.g., example/example_preprocessed.csv
 ```
 
 <br/>
 
-### 3. MMseqs2 Taxonomy
+### 2. Extract embeddings
 
 ```bash
-# load GTDB database (1~2 days)
-mmseqs database GTDB mmseqs_gtdb/gtdb tmp
-
-# run taxonomy search on the database (several hours)
-mmseqs easy-taxonomy example.fasta mmseq_gtdb/gtdb alnRes tmp
-
-# preprocess taxonomy data
-# 1. convert tsv into csv
-# 2. map the LCA annotations to the input 
-python src/preprocess.py -d example/example.fasta -i example/alnRes_lca.tsv -t "lca" -o example/example_taxonomy.csv
-
-# 3. get bert embedding of interproscan
-python src/bert_embedding.py -i example/example_taxonomy.csv -t "lca" -o example/tax_bert_emb
+python src/extract_embedding.py -i example/example_preprocessed.csv
+# By default, esm2-650M and bert models are used
+# outputs are saved under embedding/ directory under the same directory as the input file
+# e.g., example/embedding/*.npy
 ```
 
 <br/>
 
 # Prediction
 
-
 ```bash
-python src/predict.py \
-  --input_fasta example/example.fasta \
-  --output example/example_results.csv \
-  --esm_emb example/esm_emb \
-  --interproscan_emb example/interproscan_bert_emb \
-  --tax_emb example/tax_bert_emb
+python src/predict.py -i example/example_preprocessed.csv -e example/embedding
 ```
 
 <br/>
@@ -105,9 +87,9 @@ python src/predict.py \
 
 | id                | prob | pred |
 |-------------------|-------------|-----------|
-| sp\|P26683\|SIGA_NOSS1 | 0.0135     | 0         |
-| VFG007156         | 0.9783     | 1         | 
-| VFG007971         | 0.9943     | 1         |
+| sp\|P26683\|SIGA_NOSS1 | 0.2253     | 0         |
+| VFG007156         | 0.9942     | 1         | 
+| VFG007971         | 0.9359     | 1         |
 
 <br/>
 

@@ -1,3 +1,2 @@
 from .preprocess import *
-from .bert_embedding import *
-from .esm_embedding import *
+from .extract_embedding import *
