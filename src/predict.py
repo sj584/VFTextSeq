@@ -29,7 +29,7 @@ def load_embeddings(emb_dirs):
 
 def main():
     parser = argparse.ArgumentParser(description='Predict using trained XGBoost model')
-    parser.add_argument('--input_dir', '-i', type=str, required=True, help='Preprocessed CSV file path')
+    parser.add_argument('--input_path', '-i', type=str, required=True, help='Preprocessed CSV file path')
     parser.add_argument("--embedding_dir", "-e", required=True, help="Path to sequence and text embedding .npy files")
     parser.add_argument('--model_path', default='best_binary_xgb_model.pkl',
                         help='Path to XGBoost model pickle file')
@@ -51,8 +51,8 @@ def main():
     loaded_model = joblib.load(args.model_path)
 
     print("Loading embeddings...")
-    print(f"Processing {args.input_dir}...")
-    input_path = Path(args.input_dir)
+    print(f"Processing {args.input_path}...")
+    input_path = Path(args.input_path)
     if input_path.suffix.lower() in {".fasta", ".fa", ".faa"}:
         df = fasta_to_df(input_path)
     elif input_path.suffix.lower() == ".csv":
@@ -70,16 +70,17 @@ def main():
     df["prob"] = probabilities
     df["pred"] = predictions
 
-    input_path = Path(args.input_dir)
+    input_path = Path(args.input_path)
     if args.output_dir is None:
         args.output_dir = os.path.join(str(input_path.parent), "results")
         
     os.makedirs(args.output_dir, exist_ok=True)
     print(f"Saving results to: {args.output_dir}")
     output_dir = os.path.join(args.output_dir, f"{file_name}_results.csv")
-    df.to_csv(output_dir, index=False)
+    df_out = df[['id', 'prob', 'pred']]
+    df_out.to_csv(output_dir, index=False)
     print(f"Prediction complete! Shape: {df.shape} (threshold={args.threshold})")
-    print(df.head())
+    print(df_out.head())
 
 if __name__ == '__main__':
     main()
