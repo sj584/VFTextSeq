@@ -2,12 +2,8 @@
 
 <!-- ![VFTextSeq-viz](./vf.png) -->
 
-## Instruction
-1. data
-2. example
-3. src
 
-### Data directory
+## Data directory
 
 ```text
 data/
@@ -46,7 +42,7 @@ data/
     ├── test.fasta                               # test with label
     ├── test_labels.csv                          # test with label
     └── virulent_output.tsv                      # interproscan original result
-'''
+```
 
 
 ## 🚀 Environment setup
