@@ -2,6 +2,50 @@
 
 <!-- ![VFTextSeq-viz](./vf.png) -->
 
+## Instruction
+1. data
+2. example
+3. src
+
+### Data directory
+
+```text
+data/
+├── Case Study/                              # Species-specific case-study datasets
+│   ├── SA_CDHIT_90.csv                          # S.aureus
+│   ├── SP_CDHIT_90.csv                          # S.pneumoniae
+│   ├── TB_CDHIT_90.csv                          # M.tuberculosis
+│   ├── VC_CDHIT_90.csv                          # V.cholerae
+│   └── YP_CDHIT_90.csv                          # Y.pestis
+│
+├── DeepVF/                                  # DeepVF benchmark and features
+│   ├── DeepVF_Independent_Dataset/              # pos/neg fasta file
+│   ├── DeepVF_Training_Dataset/                 # pos/neg fasta file
+│   ├── VFTextSeq_model.pkl                      # XGB model weight
+│   ├── alnRes_lca_gtdb.tsv                      # mmseq_taxonomy result
+│   ├── df_interproscan.csv                      # interproscan result per protein id
+│   ├── df_interproscan_no_dup_semantic.csv      # interproscan with semantic deduplication
+│   ├── df_taxonomy_gtdb.csv                     # mmseq_taxonomy result
+│   ├── test.csv                                 # test with label
+│   └── train.csv                                # train with label
+│
+└── VirulentHunter/                          # VirulentHunter-style benchmark and features
+    ├── VFTextSeq_model.pkl                      # XGB model weight
+    ├── alnRes_lca_gtdb.tsv                      # mmseq_taxonomy result
+    ├── df_interproscan.csv                      # interproscan result per protein id
+    ├── df_interproscan_no_dup_semantic.csv      # interproscan with semantic deduplication
+    ├── df_taxonomy_gtdb.csv                     # mmseq_taxonomy result
+    ├── train.csv                                # train with detailed annotation
+    ├── train.fasta                              # train fasta file
+    ├── train_labels.csv                         # train with label
+    ├── val.csv                                  # val with detailed annotation
+    ├── val.fasta                                # val fasta file
+    ├── val_labels.csv                           # val with label
+    ├── test.csv                                 # test with detailed annotation
+    ├── test.fasta                               # test with label
+    ├── test_labels.csv                          # test with label
+    └── virulent_output.tsv                      # interproscan original result
+
 ## 🚀 Environment setup
 ```bash
 # Clone repository
