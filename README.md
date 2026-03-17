@@ -26,7 +26,7 @@ pip install -r requirements.txt
 
 <br/>
 
-## Data directory
+## Data details
 
 ```text
 data/
@@ -49,7 +49,7 @@ data/
 │   └── train.csv                                # train with label
 │   └── Interproscan_DeepVF_output.tsv           # interproscan original result   
 │
-└── VirulentHunter/                          # VirulentHunter-style benchmark and features
+└── VirulentHunter/                          # VirulentHunter benchmark and features
     ├── VFTextSeq_model.pkl                      # XGB model weight
     ├── alnRes_lca_gtdb.tsv                      # mmseq_taxonomy result
     ├── df_interproscan.csv                      # interproscan result per protein id
