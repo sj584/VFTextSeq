@@ -3,6 +3,29 @@
 <!-- ![VFTextSeq-viz](./vf.png) -->
 
 
+
+
+
+## 🚀 Environment setup
+```bash
+# Clone repository
+git clone https://github.com/sj584/VFTextSeq.git
+cd VFTextSeq
+
+# Create conda environment
+conda create -n VFTextSeq python=3.10
+conda activate VFTextSeq
+
+# install pytorch & pip
+conda install pytorch==2.2.2 torchvision==0.17.2 torchaudio==2.2.2 pytorch-cuda=12.1 -c pytorch -c nvidia
+conda install pip -y
+
+# install other libraries using requirements.txt 
+pip install -r requirements.txt
+```
+
+<br/>
+
 ## Data directory
 
 ```text
@@ -43,27 +66,6 @@ data/
     ├── test_labels.csv                          # test with label
     └── virulent_output.tsv                      # interproscan original result
 ```
-
-
-## 🚀 Environment setup
-```bash
-# Clone repository
-git clone https://github.com/sj584/VFTextSeq.git
-cd VFTextSeq
-
-# Create conda environment
-conda create -n VFTextSeq python=3.10
-conda activate VFTextSeq
-
-# install pytorch & pip
-conda install pytorch==2.2.2 torchvision==0.17.2 torchaudio==2.2.2 pytorch-cuda=12.1 -c pytorch -c nvidia
-conda install pip -y
-
-# install other libraries using requirements.txt 
-pip install -r requirements.txt
-```
-
-<br/>
 
 ## 📁 Input Format
 
