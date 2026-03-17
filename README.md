@@ -28,6 +28,7 @@ data/
 │   ├── df_taxonomy_gtdb.csv                     # mmseq_taxonomy result
 │   ├── test.csv                                 # test with label
 │   └── train.csv                                # train with label
+│   └── Interproscan_DeepVF_output.tsv           # interproscan original result   
 │
 └── VirulentHunter/                          # VirulentHunter-style benchmark and features
     ├── VFTextSeq_model.pkl                      # XGB model weight
@@ -45,6 +46,8 @@ data/
     ├── test.fasta                               # test with label
     ├── test_labels.csv                          # test with label
     └── virulent_output.tsv                      # interproscan original result
+'''
+
 
 ## 🚀 Environment setup
 ```bash
