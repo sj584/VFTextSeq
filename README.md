@@ -40,7 +40,8 @@ data/
 ├── DeepVF/                                  # DeepVF benchmark and features
 │   ├── DeepVF_Independent_Dataset/              # pos/neg fasta file
 │   ├── DeepVF_Training_Dataset/                 # pos/neg fasta file
-│   ├── VFTextSeq_model.pkl                      # XGB model weight
+│   ├── VFTextSeq_model.joblib                   # XGB model weight
+|   ├── VFTextSeq_predictions.csv                # Prediction result 
 │   ├── alnRes_lca_gtdb.tsv                      # mmseq_taxonomy result
 │   ├── df_interproscan.csv                      # interproscan result per protein id
 │   ├── df_interproscan_no_dup_semantic.csv      # interproscan with semantic deduplication
@@ -52,7 +53,8 @@ data/
 │   └── Interproscan_DeepVF_output.tsv           # interproscan original result   
 │
 └── VirulentHunter/                          # VirulentHunter benchmark and features
-    ├── VFTextSeq_model.pkl                      # XGB model weight
+    ├── VFTextSeq_model.joblib                   # XGB model weight
+    ├── VFTextSeq_predictions.csv                # Prediction result 
     ├── alnRes_lca_gtdb.tsv                      # mmseq_taxonomy result
     ├── df_interproscan.csv                      # interproscan result per protein id
     ├── df_interproscan_no_dup_semantic.csv      # interproscan with semantic deduplication
