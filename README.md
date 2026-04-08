@@ -116,9 +116,11 @@ mmseqs easy-search example_tea.fasta VirulentHunter/trainval_tea.fasta VirulentH
     --sub-mat /home/user/miniconda3/envs/TEA/lib/python3.11/site-packages/tea/matcha.out \
     --seed-sub-mat /home/user/miniconda3/envs/TEA/lib/python3.11/site-packages/tea/matcha.out \
     --exact-kmer-matching 1
+```
 
 ## 📚 References
 1. ESM2 - Protein language model [GitHub](https://github.com/facebookresearch/esm)
 2. InterProScan - Functional annotations [Document](https://interproscan-docs.readthedocs.io/en/v5/#)
 3. MMseqs2 taxonomy - Taxonomy search [GitHub](https://github.com/soedinglab/MMseqs2) & [Document](https://github.com/soedinglab/mmseqs2/wiki)<br/>
-4. BioBERT - language mode for text embedding [BioBERT](https://huggingface.co/dmis-lab/biobert-v1.1) 
+4. BioBERT - language mode for text embedding [BioBERT](https://huggingface.co/dmis-lab/biobert-v1.1)
+5. TEA - rewriting protein alphabets with language models [TEA](https://github.com/PickyBinders/tea)
