@@ -103,49 +103,22 @@ mmseqs database GTDB mmseqs_gtdb/gtdb tmp
 # 2-2. run taxonomy search on the database (several hours)
 mmseqs easy-taxonomy example.fasta mmseq_gtdb/gtdb alnRes tmp
 
-# 3. preprocess text data (.tsv files)
-# 3-1. convert tsv into csv
-# 3-2. remove redundant texts (interproscan) from the annotations
-python src/preprocess.py -i example/example.fasta -ip example/example_interproscan.tsv -mp example/alnRes_lca.tsv
-# outputs are saved at the same directory as the input fasta file
-# e.g., example/example_preprocessed.csv
-```
-
-<br/>
-
-### 2. Extract embeddings
-
-```bash
-python src/extract_embedding.py -i example/example_preprocessed.csv
-# By default, esm2-650M and bert models are used
-# outputs are saved under embedding/ directory under the same directory as the input file
-# e.g., example/embedding/*.npy
-```
-
-<br/>
-
-# Prediction
-
-```bash
-python src/predict.py -i example/example_preprocessed.csv -e example/embedding
-```
-
-<br/>
-
-## 📁 Model Prediction Results
-### Example CSV
-<br/>
-
-| id                | prob | pred |
-|-------------------|-------------|-----------|
-| sp\|P26683\|SIGA_NOSS1 | 0.2253     | 0         |
-| VFG007156         | 0.9942     | 1         | 
-| VFG007971         | 0.9359     | 1         |
-
-<br/>
+# 3. TEA-MMseqs2
+# 3-1. generate TEA tokens
+python tea_fasta.py VirulentHunter/train_val.fasta VirulentHunter/trainval_tea.fasta --batch_size 16
+python tea_fasta.py example.fasta example_tea.fasta --batch_size 16
+# 3-2. perform TEA-MMseqs2 search
+mmseqs easy-search example_tea.fasta VirulentHunter/trainval_tea.fasta VirulentHunter/results.m8 VirulentHunter/tmp/ \
+    --comp-bias-corr 0 \
+    --mask 0 \
+    --gap-open 18 \
+    --gap-extend 3 \
+    --sub-mat /home/user/miniconda3/envs/TEA/lib/python3.11/site-packages/tea/matcha.out \
+    --seed-sub-mat /home/user/miniconda3/envs/TEA/lib/python3.11/site-packages/tea/matcha.out \
+    --exact-kmer-matching 1
 
 ## 📚 References
 1. ESM2 - Protein language model [GitHub](https://github.com/facebookresearch/esm)
 2. InterProScan - Functional annotations [Document](https://interproscan-docs.readthedocs.io/en/v5/#)
 3. MMseqs2 taxonomy - Taxonomy search [GitHub](https://github.com/soedinglab/MMseqs2) & [Document](https://github.com/soedinglab/mmseqs2/wiki)<br/>
-4. BERT - language mode for text embedding [BERT](https://huggingface.co/google-bert/bert-base-uncased) 
+4. BioBERT - language mode for text embedding [BioBERT](https://huggingface.co/dmis-lab/biobert-v1.1) 
