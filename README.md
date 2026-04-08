@@ -46,7 +46,9 @@ data/
 │   ├── df_interproscan_no_dup_semantic.csv      # interproscan with semantic deduplication
 │   ├── df_taxonomy_gtdb.csv                     # mmseq_taxonomy result
 │   ├── test.csv                                 # test with label
-│   └── train.csv                                # train with label
+│   ├── train.csv                                # train with label
+│   ├── test_best_hit_label_transfer.csv         # test with TEA-MMseqs2 transfered label
+│   ├── train_best_hit_noself_label_transfer.csv # train with TEA-MMseqs2 transfered label
 │   └── Interproscan_DeepVF_output.tsv           # interproscan original result   
 │
 └── VirulentHunter/                          # VirulentHunter benchmark and features
@@ -64,6 +66,8 @@ data/
     ├── test.csv                                 # test with detailed annotation
     ├── test.fasta                               # test with label
     ├── test_labels.csv                          # test with label
+    ├── test_best_hit_label_transfer.csv         # test with TEA-MMseqs2 transfered label
+    ├── trainval_best_hit_noself_label_transfer.csv # train with TEA-MMseqs2 transfered label
     └── virulent_output.tsv                      # interproscan original result
 ```
 
