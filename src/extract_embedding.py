@@ -9,7 +9,6 @@ from tqdm import tqdm
 from transformers import AutoModel, AutoTokenizer
 
 
-# ESM2
 def seq_extract(df, model_name="esm2_t33_650M_UR50D", layer=33, batch_size=1, device="cuda"):
     device = torch.device(device if torch.cuda.is_available() else "cpu")
     model, alphabet = torch.hub.load("facebookresearch/esm:main", model_name)
@@ -36,7 +35,7 @@ def seq_extract(df, model_name="esm2_t33_650M_UR50D", layer=33, batch_size=1, de
     return np.array(sequence_representations)
 
 
-def txt_extract(df, model_name="google-bert/bert-base-uncased", device="cuda"):
+def txt_extract(df, model_name="dmis-lab/biobert-v1.1", device="cuda"):
     device = torch.device(device if torch.cuda.is_available() else "cpu")
     tokenizer = AutoTokenizer.from_pretrained(model_name)
     model = AutoModel.from_pretrained(model_name).to(device)
