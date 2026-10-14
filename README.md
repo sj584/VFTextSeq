@@ -13,15 +13,15 @@ git clone https://github.com/sj584/VFTextSeq.git
 cd VFTextSeq
 
 # Create conda environment
-conda create -n VFTextSeq python=3.10
+conda create -n VFTextSeq python=3.11 -y
 conda activate VFTextSeq
 
-# install pytorch & pip
-conda install pytorch==2.2.2 torchvision==0.17.2 torchaudio==2.2.2 pytorch-cuda=12.1 -c pytorch -c nvidia
-conda install pip -y
+# install pytorch
+pip3 install torch torchvision --index-url https://download.pytorch.org/whl/cu126
 
 # install other libraries using requirements.txt 
 pip install -r requirements.txt
+python -m pip install git+https://github.com/PickyBinders/tea.git
 ```
 
 <br/>
@@ -94,33 +94,73 @@ MAFTRIHSFLASAGNTSMYKRVWRFWYPLMTHKLGTDEIMFINWAYEEDPPMALPLEASDEPNRAHINLYHRTATQVNLS
 ### 1. Preprocess input data
 ```bash
 # 1. InterProScan
-# 1.1 run interproscan to get annotations (several hours)
-./interproscan.sh -i example.fasta -f tsv -o example_interproscan.tsv
+# 1-1. install InterProScan following instructions in https://github.com/ebi-pf-team/interproscan6
+# 1-2. run interproscan to get annotations (~1 minute)
+nextflow run ebi-pf-team/interproscan6   -r 6.0.2.2   -profile docker   --datadir data   --input example.fasta
+# example.fasta.tsv: Tabular summary of InterPro matches
 
 # 2. MMseqs2 Taxonomy
-# 2-1. load GTDB database (1~2 days)
+# 2.1. install mmseqs2
+conda install -c conda-forge -c bioconda mmseqs2
+# 2-2. download GTDB database (1~2 days)
 mmseqs database GTDB mmseqs_gtdb/gtdb tmp
-# 2-2. run taxonomy search on the database (several hours)
+# 2-3. run taxonomy search on the database (several hours)
 mmseqs easy-taxonomy example.fasta mmseq_gtdb/gtdb alnRes tmp
+# alnRes_lca.tsv: Tabular summary of mmseqs taxonomy matches
 
 # 3. TEA-MMseqs2
-# 3-1. generate TEA tokens
-python tea_fasta.py VirulentHunter/train_val.fasta VirulentHunter/trainval_tea.fasta --batch_size 16
-python tea_fasta.py example.fasta example_tea.fasta --batch_size 16
+# 3-1. generate TEA tokens for train+val data
+cat data/VirulentHunter/{train,val}.fasta > data/VirulentHunter/train+val.fasta
+tea_convert \
+  -f 'data/VirulentHunter/train+val.fasta' \
+  -o 'data/VirulentHunter/train+val_tea.fasta' \
+  -H
+tea_convert \
+  -f 'example/example.fasta' \
+  -o 'data/VirulentHunter/example_tea.fasta' \
+  -H
 # 3-2. perform TEA-MMseqs2 search
-mmseqs easy-search example_tea.fasta VirulentHunter/trainval_tea.fasta VirulentHunter/results.m8 VirulentHunter/tmp/ \
+TEA_MATRIX="$(python -c 'from importlib.resources import files; print(files("tea") / "matcha.out")')"
+mmseqs easy-search \
+    'data/VirulentHunter/example_tea.fasta' \
+    'data/VirulentHunter/train+val_tea.fasta' \
+    'data/VirulentHunter/tea_results.m8' \
+    'data/VirulentHunter/tmp/' \
     --comp-bias-corr 0 \
     --mask 0 \
     --gap-open 18 \
     --gap-extend 3 \
-    --sub-mat /home/user/miniconda3/envs/TEA/lib/python3.11/site-packages/tea/matcha.out \
-    --seed-sub-mat /home/user/miniconda3/envs/TEA/lib/python3.11/site-packages/tea/matcha.out \
+    --sub-mat "$TEA_MATRIX" \
+    --seed-sub-mat "$TEA_MATRIX" \
     --exact-kmer-matching 1
+# tea_results.m8: TEA search result
+
+# 4. Merge into single input csv
+python src/preprocess.py \
+    -i example/example.fasta \
+    -ip example/example.fasta.tsv \
+    -mp example/alnRes_lca.tsv \
+    -tp data/VirulentHunter/tea_results.m8
+
+# final preprocessed data saved to example/example_preprocessed.csv
+```
+<br>
+
+### 2. Generate embedding and predict!
+```bash
+# 1. Generate embeddings
+python src/extract_embedding.py -i example/example_preprocessed.csv
+
+#2. Predict
+python src/predict.py \
+     -i example/example_preprocessed.csv \
+     -e example/embedding \
+     --model_path data/VirulentHunter/VFTextSeq_model.joblib
 ```
 
 ## 📚 References
 1. ESM2 - Protein language model [GitHub](https://github.com/facebookresearch/esm)
-2. InterProScan - Functional annotations [Document](https://interproscan-docs.readthedocs.io/en/v5/#)
+2. InterProScan - Functional annotations [Github](https://github.com/ebi-pf-team/interproscan6)
 3. MMseqs2 taxonomy - Taxonomy search [GitHub](https://github.com/soedinglab/MMseqs2) & [Document](https://github.com/soedinglab/mmseqs2/wiki)<br/>
 4. BioBERT - language mode for text embedding [BioBERT](https://huggingface.co/dmis-lab/biobert-v1.1)
 5. TEA - rewriting protein alphabets with language models [TEA](https://github.com/PickyBinders/tea)

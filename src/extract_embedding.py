@@ -59,7 +59,7 @@ def main():
     parser = argparse.ArgumentParser(description='Generate pretrained model embeddings from FASTA')
     parser.add_argument('--input_dir', '-i', type=str, required=True, help='Preprocessed CSV file path')
     parser.add_argument('--seq_model', '-sm', default="esm2-650m", type=str, help='Name of pretrained protein language model')
-    parser.add_argument('--text_model', '-tm', default="bert", type=str, help='Name of pretrained language model')
+    parser.add_argument('--text_model', '-tm', default="biobert", type=str, help='Name of pretrained language model')
     parser.add_argument(
         "--output_dir", "-o",
         type=str,

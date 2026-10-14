@@ -27,6 +27,7 @@ def load_embeddings(emb_dirs):
 
     return emb
 
+
 def main():
     parser = argparse.ArgumentParser(description='Predict using trained XGBoost model')
     parser.add_argument('--input_path', '-i', type=str, required=True, help='Preprocessed CSV file path')
@@ -53,15 +54,17 @@ def main():
     print("Loading embeddings...")
     print(f"Processing {args.input_path}...")
     input_path = Path(args.input_path)
-    if input_path.suffix.lower() in {".fasta", ".fa", ".faa"}:
-        df = fasta_to_df(input_path)
-    elif input_path.suffix.lower() == ".csv":
-        df = pd.read_csv(input_path)
-    else:
-        raise ValueError(f"Unsupported input format: {input_path.suffix}")
+    
+    df = pd.read_csv(input_path)
 
     file_name = input_path.stem
-    X = load_embeddings(args.embedding_dir)
+    tab = df[["pred_label", "fident", "bitscore", "evalue"]].copy()
+    tab["evalue"] = np.log10(tab["evalue"].replace(0, 1e-300))
+
+    X = np.concatenate([
+        load_embeddings(args.embedding_dir),
+        tab.fillna(0.0).to_numpy(dtype=np.float32),
+    ], axis=1)
 
     print("Making predictions...")
     probabilities = loaded_model.predict_proba(X)[:, 1]

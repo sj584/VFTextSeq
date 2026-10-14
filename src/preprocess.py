@@ -107,13 +107,23 @@ def map_by_substring(row_id, tax_df):
         return match["taxid"], match["rank"], match["name"]
     else:
         return pd.NA, pd.NA, pd.NA
-    
+
+
+def normalize_id(ids):
+    return (
+        ids.astype(str)
+        .str.replace(r"\|(?:avg_entropy|H)=.*$", "", regex=True)
+        .str.replace(r"^gi\|\d+\|[^|]+\|([^|]+)\|.*$", r"\1", regex=True)
+        .str.replace(r"^(?:sp|tr)\|([^|]+)\|.*$", r"\1", regex=True)
+    )
+
 
 def main():
     parser = argparse.ArgumentParser(description="Preprocess retrieved texts and map to original data.")
     parser.add_argument("--input_dir", "-i", required=True, help="Path to input file (.fasta or .csv)")
     parser.add_argument("--interproscan_path", "-ip", required=True, help="Path to InterProScan .tsv output file")
     parser.add_argument("--mmseqs_path", "-mp", required=True, help="Path to MMseqs2 Taxonomy .tsv output file")
+    parser.add_argument("--tea_path", "-tp", required=True, help="Path to tea search .fasta output file")
     parser.add_argument("--similarity_threshold", type=float, default=0.85, help="Semantic similarity threshold (default: 0.85)")
     parser.add_argument(
         "--output_dir", "-o",
@@ -159,6 +169,40 @@ def main():
     df["taxid"] = tax_cols.apply(lambda x: x[0])
     df["rank"] = tax_cols.apply(lambda x: x[1])
     df["name"] = tax_cols.apply(lambda x: x[2])
+
+    # Tea label transfer
+    cols = [
+        "qseqid", "tseqid", "fident", "alnlen", "mismatch", "gapopen",
+        "qstart", "qend", "tstart", "tend", "evalue", "bitscore"
+    ]
+    hits = pd.read_csv(args.tea_path, sep="\t", header=None, names=cols)
+    for col in ("qseqid", "tseqid"):
+        hits[col] = normalize_id(hits[col])
+    
+    ref_dir = Path(args.tea_path).resolve().parent
+    refs = pd.concat([
+        pd.read_csv(ref_dir / f"{split}_labels.csv", usecols=["id", "label"])
+        for split in ("train", "val")
+    ])
+    label_map = refs.set_index(
+        normalize_id(refs["id"]), verify_integrity=True
+    )["label"]
+
+    best = (
+        hits.loc[hits["qseqid"] != hits["tseqid"]]
+        .sort_values(
+            ["bitscore", "evalue", "tseqid"],
+            ascending=[False, True, True],
+        )
+        .drop_duplicates("qseqid")
+        .set_index("qseqid")
+    )
+    best["pred_label"] = label_map.loc[best["tseqid"]].to_numpy()
+
+    query_ids = normalize_id(df["id"])
+    df["ref_id"] = query_ids.map(best["tseqid"])
+    for col in ("pred_label", "fident", "bitscore", "evalue"):
+        df[col] = query_ids.map(best[col])
 
     # Save
     out_dir = os.path.join(args.output_dir, f"{file_name}_preprocessed.csv")

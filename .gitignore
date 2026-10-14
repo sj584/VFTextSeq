@@ -4,6 +4,8 @@ __pycache__/
 # Data
 embedding/
 results/
+tmp/
+mmseq_gtdb/
 
 # Extra
 visualization/
