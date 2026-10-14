@@ -105,7 +105,7 @@ conda install -c conda-forge -c bioconda mmseqs2
 # 2-2. download GTDB database (1~2 days)
 mmseqs database GTDB mmseqs_gtdb/gtdb tmp
 # 2-3. run taxonomy search on the database (several hours)
-mmseqs easy-taxonomy example.fasta mmseq_gtdb/gtdb alnRes tmp
+mmseqs easy-taxonomy example/example.fasta mmseq_gtdb/gtdb alnRes tmp
 # alnRes_lca.tsv: Tabular summary of mmseqs taxonomy matches
 
 # 3. TEA-MMseqs2
